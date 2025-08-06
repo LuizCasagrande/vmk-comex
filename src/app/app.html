@@ -1,0 +1,64 @@
+<header
+  class="flex flex-wrap align-items-center justify-content-center sm:justify-content-between shadow-3 sm:shadow-none p-0 pt-3 sm:p-3">
+  <img alt="VMK Comex"
+       class="cursor-pointer"
+       height="100"
+       ngSrc="vmk.png"
+       width="112"/>
+
+  <div class="mt-3 sm:mt-0 scroll-x sm:overflow-hidden">
+    <p-button label="Nós" variant="text"/>
+    <p-button label="Produtos/Serviços" variant="text"/>
+    <p-button label="E-Book" variant="text"/>
+    <p-button label="Contato" variant="text"/>
+  </div>
+</header>
+
+<app-page [body]="DATA[0].body"
+          [header]="DATA[0].header"
+          [image]="DATA[0].image"/>
+<hr>
+<app-page [body]="DATA[1].body"
+          [header]="DATA[1].header"
+          [image]="DATA[1].image"/>
+<hr>
+<app-page [body]="DATA[2].body"
+          [header]="DATA[2].header"
+          [image]="DATA[2].image"
+          [reversed]="true">
+  <div class="flex flex-wrap justify-content-around my-5">
+    <div class="col-12 md:col-6">
+      <app-card body="Antecipar desafios e oferecer soluções ágeis e personalizadas."
+                header="Expertise"
+                icon="pi-verified"/>
+    </div>
+    <div class="col-12 md:col-6">
+      <app-card body="Relacionamentos sólidos através da colaboração e da confiança mútua."
+                header="Colaboração"
+                icon="pi-sparkles"/>
+    </div>
+  </div>
+</app-page>
+<hr>
+<app-page [body]="DATA[3].body"
+          [header]="DATA[3].header"
+          [image]="DATA[3].image">
+  <div class="flex flex-wrap justify-content-around my-5">
+    <app-card body="Oportunidade e prosperidade para seu negócio."
+              icon="pi-chart-line"/>
+  </div>
+</app-page>
+
+<div class="mx-5">
+  <p-accordion value="0">
+    @for (topic of DATA[3].topics; track $index) {
+      <p-accordion-panel value="{{$index}}">
+        <p-accordion-header>{{ topic.title }}</p-accordion-header>
+        <p-accordion-content>
+          <span>{{ topic.description }}</span>
+        </p-accordion-content>
+      </p-accordion-panel>
+    }
+  </p-accordion>
+</div>
+<hr>

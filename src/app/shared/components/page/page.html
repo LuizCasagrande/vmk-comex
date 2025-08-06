@@ -1,0 +1,11 @@
+<div [ngClass]="{'flex-row-reverse': reversed}"
+     class="flex flex-wrap justify-content-around align-items-center text-center m-5">
+  <div class="w-12 md:w-6">
+    <h1 class="uppercase font-normal text-2xl">{{ header }}</h1>
+    <p [innerHTML]="body" class="line-height-4"></p>
+    <ng-content></ng-content>
+  </div>
+  <div class="w-12 md:w-6">
+    <p-image [alt]="header" [src]="image" class="vmk-image"/>
+  </div>
+</div>
