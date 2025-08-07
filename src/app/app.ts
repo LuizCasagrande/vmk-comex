@@ -28,4 +28,8 @@ export class App {
   constructor(protected readonly primeNG: PrimeNG) {
     this.primeNG.ripple.set(true);
   }
+
+  scroll(element: HTMLElement): void {
+    element.scrollIntoView({behavior: 'smooth', block: 'center'});
+  }
 }

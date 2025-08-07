@@ -1,27 +1,36 @@
-<header
-  class="flex flex-wrap align-items-center justify-content-center sm:justify-content-between shadow-3 sm:shadow-none p-0 pt-3 sm:p-3">
-  <img alt="VMK Comex"
-       class="cursor-pointer"
-       height="100"
-       ngSrc="vmk.png"
-       width="112"/>
-
-  <div class="mt-3 sm:mt-0 scroll-x sm:overflow-hidden">
-    <p-button label="Nós" variant="text"/>
-    <p-button label="Produtos/Serviços" variant="text"/>
-    <p-button label="E-Book" variant="text"/>
-    <p-button label="Contato" variant="text"/>
+<header class="bg-primary-reverse shadow-4">
+  <div class="flex flex-wrap align-items-center justify-content-between p-4">
+    <div class="w-12 md:w-3 text-center md:text-left">
+      <img alt="VMK Comex"
+           class="cursor-pointer border-circle"
+           height="125"
+           ngSrc="logo.jpg"
+           width="125"/>
+    </div>
+    <div class="w-12 md:w-6 text-center py-2 md:py-0 scroll-x sm:overflow-hidden">
+      <p-button (onClick)="scroll(nos)" label="Nós" variant="text"/>
+      <p-button label="Produtos/Serviços" variant="text"/>
+      <p-button label="E-Book" variant="text"/>
+      <p-button label="Contato" variant="text"/>
+    </div>
+    <div class="w-12 md:w-3 text-center md:text-right">
+      <p-button icon="pi pi-whatsapp" size="large" variant="text"/>
+      <a href="https://www.instagram.com/vmkcomex" target="_blank">
+        <p-button icon="pi pi-instagram" size="large" variant="text"/>
+      </a>
+      <p-button icon="pi pi-envelope" size="large" variant="text"/>
+    </div>
   </div>
 </header>
 
 <app-page [body]="DATA[0].body"
           [header]="DATA[0].header"
           [image]="DATA[0].image"/>
-<hr>
-<app-page [body]="DATA[1].body"
-          [header]="DATA[1].header"
-          [image]="DATA[1].image"/>
-<hr>
+<div #nos>
+  <app-page [body]="DATA[1].body"
+            [header]="DATA[1].header"
+            [image]="DATA[1].image"/>
+</div>
 <app-page [body]="DATA[2].body"
           [header]="DATA[2].header"
           [image]="DATA[2].image"
@@ -39,7 +48,6 @@
     </div>
   </div>
 </app-page>
-<hr>
 <app-page [body]="DATA[3].body"
           [header]="DATA[3].header"
           [image]="DATA[3].image">
@@ -48,7 +56,6 @@
               icon="pi-chart-line"/>
   </div>
 </app-page>
-
 <div class="mx-5">
   <p-accordion value="0">
     @for (topic of DATA[3].topics; track $index) {
@@ -61,4 +68,9 @@
     }
   </p-accordion>
 </div>
-<hr>
+
+<footer>
+  <div class="text-center opacity-80 mx-3 my-5">
+    <span>© VMK Comex 2025 - todos os direitos reservados</span>
+  </div>
+</footer>

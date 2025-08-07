@@ -8,6 +8,18 @@ html, body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+
+  background-color: color-mix(in srgb, #18181B, transparent 22%);
+  background-blend-mode: multiply;
+  background-image: url('../public/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+* {
+  outline: none !important;
 }
 
 .vmk-image {
@@ -18,21 +30,12 @@ html, body {
   }
 }
 
-hr {
-  margin: 4rem 0 4rem 0;
-  border: 1px solid lightgray;
-  position: relative;
-  width: 33%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 .scroll-x {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap
 }
 
-header {
-  //box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, .5);
+.text-shadow {
+  text-shadow: 4px 4px 5px black;
 }
