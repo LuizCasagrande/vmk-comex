@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Directive, Input} from '@angular/core';
 import {Image} from "primeng/image";
 import {NgClass} from '@angular/common';
 
@@ -23,4 +23,11 @@ export class Page {
 
   @Input()
   reversed = false;
+}
+
+@Directive({
+  selector: '[pageTemplate]',
+})
+export class PageTemplate {
+  @Input() template!: string;
 }

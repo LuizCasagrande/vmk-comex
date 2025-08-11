@@ -1,11 +1,14 @@
 <div [ngClass]="{'flex-row-reverse': reversed}"
      class="flex flex-wrap justify-content-around align-items-center text-center text-shadow mx-5 my-7">
-  <div class="w-12 md:w-6">
+  <div class="w-12 md:w-6 flex flex-column justify-content-center align-items-center">
     <h1 class="uppercase font-normal text-3xl">{{ header }}</h1>
-    <p [innerHTML]="body" class="line-height-4 text-xl"></p>
-    <ng-content></ng-content>
+    <p [innerHTML]="body" class="line-height-4 text-xl w-12 md:w-6"></p>
+    <ng-content select="[pageTemplate=mainContent]"></ng-content>
   </div>
   <div class="w-12 md:w-6">
-    <p-image [alt]="header" [src]="image" class="vmk-image" imageClass="shadow-4"/>
+    @if (image) {
+      <p-image [alt]="header" [src]="image" class="vmk-image" imageClass="shadow-4"/>
+    }
+    <ng-content select="[pageTemplate=extraContent]"></ng-content>
   </div>
 </div>

@@ -1,23 +1,22 @@
 import {Component} from '@angular/core';
 import {PrimeNG} from 'primeng/config';
-import {NgOptimizedImage} from '@angular/common';
-import {Page} from './shared/components/page/page';
+import {Page, PageTemplate} from './shared/components/page/page';
 import {DATA} from './data';
-import {Button} from 'primeng/button';
 import {Card} from './shared/components/card/card';
 import {Accordion, AccordionContent, AccordionHeader, AccordionPanel} from 'primeng/accordion';
+import {Header} from './header/header';
 
 @Component({
   selector: 'app-root',
   imports: [
-    NgOptimizedImage,
     Page,
-    Button,
     Card,
     Accordion,
     AccordionPanel,
     AccordionHeader,
     AccordionContent,
+    PageTemplate,
+    Header,
   ],
   templateUrl: './app.html',
 })
@@ -27,9 +26,5 @@ export class App {
 
   constructor(protected readonly primeNG: PrimeNG) {
     this.primeNG.ripple.set(true);
-  }
-
-  scroll(element: HTMLElement): void {
-    element.scrollIntoView({behavior: 'smooth', block: 'center'});
   }
 }

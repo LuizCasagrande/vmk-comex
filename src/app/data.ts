@@ -39,16 +39,28 @@ export const DATA: Page[] = [
       {title: 'Histórico com o exportador', description: 'A empresa cria um histórico de compra com o exportador.'},
     ],
   },
+  {
+    header: 'Nossos Números',
+    body: `
+      <span>Nossa experiência prática nos permite identificar oportunidades e oferecer soluções inovadoras para impulsionar o crescimento do seu negócio.</span>
+    `,
+    topics: [
+      {description: ``},
+      {description: ``},
+      {description: ``},
+      {description: ``},
+    ],
+  },
 ];
 
 interface Page {
   header: string,
   body: string,
-  image: string,
+  image?: string,
   topics?: Topic[],
 }
 
 interface Topic {
-  title: string,
+  title?: string,
   description: string,
 }
