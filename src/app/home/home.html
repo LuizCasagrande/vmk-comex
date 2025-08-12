@@ -1,0 +1,56 @@
+<app-page [body]="ADVICE.body"
+          [header]="ADVICE.header"
+          [image]="ADVICE.image"/>
+
+<div id="aboutUs">
+  <app-page [body]="ABOUT.body"
+            [header]="ABOUT.header"
+            [image]="ABOUT.image"
+            [reversed]="true"/>
+  <app-page [body]="NUMBERS.body"
+            [header]="NUMBERS.header">
+    <div class="flex flex-wrap" pageTemplate="extraContent">
+      @for (card of NUMBERS.cards; track $index) {
+        <app-card class="col-6"
+                  [body]="card.body"
+                  [icon]="card.icon"/>
+      }
+    </div>
+  </app-page>
+</div>
+
+<app-page [body]="SOLUTIONS.body"
+          [header]="SOLUTIONS.header"
+          [image]="SOLUTIONS.image"
+          [reversed]="true">
+  <div class="flex flex-wrap justify-content-around my-4" pageTemplate="mainContent">
+    @for (card of SOLUTIONS.cards; track $index) {
+      <app-card class="col-12 md:col-6"
+                [body]="card.body"
+                [header]="card.header"
+                [icon]="card.icon"/>
+    }
+  </div>
+</app-page>
+
+<app-page [body]="BENEFITS.body"
+          [header]="BENEFITS.header"
+          [image]="BENEFITS.image">
+  <div class="flex justify-content-around my-4 col-12 md:col-6" pageTemplate="mainContent">
+    @for (card of BENEFITS.cards; track $index) {
+      <app-card [body]="card.body"
+                [icon]="card.icon"/>
+    }
+  </div>
+</app-page>
+
+<div class="mx-5">
+  <p-accordion value="0">
+    @for (topic of BENEFITS.topics; track $index) {
+      <p-accordion-panel value="{{$index}}">
+        <p-accordion-header>{{ topic.title }}</p-accordion-header>
+        <p-accordion-content>{{ topic.description }}</p-accordion-content>
+      </p-accordion-panel>
+    }
+  </p-accordion>
+</div>

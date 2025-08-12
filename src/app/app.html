@@ -1,74 +1,9 @@
-<app-header [aboutUs]="aboutUs"></app-header>
+<app-header/>
 
-<app-page [body]="DATA[0].body"
-          [header]="DATA[0].header"
-          [image]="DATA[0].image!"/>
-
-<div #aboutUs>
-  <app-page [body]="DATA[1].body"
-            [header]="DATA[1].header"
-            [image]="DATA[1].image!"
-            [reversed]="true"/>
-  <app-page [body]="DATA[4].body"
-            [header]="DATA[4].header">
-    <div class="flex flex-wrap" pageTemplate="extraContent">
-      <app-card [body]="'<strong>15 milhões</strong> em transações.'"
-                class="col-6"
-                icon="pi pi-plus"/>
-      <app-card [body]="'<strong>1000 tons</strong> em entregas.'"
-                class="col-6"
-                icon="pi pi-plus"/>
-      <app-card [body]="'<strong>7 Anos</strong> de mercado.'"
-                class="col-6"
-                icon="pi pi-plus"/>
-      <app-card [body]="'<strong>80</strong> Operações Portuárias.'"
-                class="col-6"
-                icon="pi pi-plus"/>
-    </div>
-  </app-page>
-</div>
-
-<app-page [body]="DATA[2].body"
-          [header]="DATA[2].header"
-          [image]="DATA[2].image!"
-          [reversed]="true">
-  <div class="flex flex-wrap justify-content-around my-5" pageTemplate="mainContent">
-    <app-card body="Antecipar desafios e oferecer soluções ágeis e personalizadas."
-              class="col-12 md:col-6"
-              header="Expertise"
-              icon="pi-verified"/>
-    <app-card body="Relacionamentos sólidos através da colaboração e da confiança mútua."
-              class="col-12 md:col-6"
-              header="Colaboração"
-              icon="pi-sparkles"/>
-  </div>
-</app-page>
-
-<app-page [body]="DATA[3].body"
-          [header]="DATA[3].header"
-          [image]="DATA[3].image!">
-  <div class="flex justify-content-around my-5" pageTemplate="mainContent">
-    <app-card body="Oportunidade e prosperidade para seu negócio."
-              class="p-2"
-              icon="pi-chart-line"/>
-  </div>
-</app-page>
-
-<div class="mx-5">
-  <p-accordion value="0">
-    @for (topic of DATA[3].topics; track $index) {
-      <p-accordion-panel value="{{$index}}">
-        <p-accordion-header>{{ topic.title }}</p-accordion-header>
-        <p-accordion-content>
-          <span>{{ topic.description }}</span>
-        </p-accordion-content>
-      </p-accordion-panel>
-    }
-  </p-accordion>
-</div>
+<router-outlet/>
 
 <footer>
   <div class="text-center opacity-80 mx-3 my-5">
-    <span>© VMK Comex 2025 - todos os direitos reservados</span>
+    <span>© VMK Comex 2025 - Todos os direitos reservados.</span>
   </div>
 </footer>

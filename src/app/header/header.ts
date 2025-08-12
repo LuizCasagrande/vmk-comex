@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component} from '@angular/core';
 import {Button} from 'primeng/button';
 import {NgOptimizedImage} from '@angular/common';
 
@@ -12,10 +12,7 @@ import {NgOptimizedImage} from '@angular/common';
 })
 export class Header {
 
-  @Input()
-  aboutUs?: HTMLElement;
-
-  scrollToAboutUs(): void {
-    this.aboutUs!.scrollIntoView({behavior: 'smooth', block: 'center'});
+  scrollTo(id: string): void {
+    document.getElementById(id)!.scrollIntoView({behavior: 'smooth', block: 'start'});
   }
 }
