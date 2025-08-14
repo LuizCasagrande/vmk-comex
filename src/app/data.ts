@@ -17,7 +17,7 @@ export const DATA: Map<string, Page> = new Map([
       body: `
         <strong>A VMK Comex é especializada na importação de produtos siderúrgicos e materias de construção civil.</strong>
         <span class="block my-3">Para nós, tão importante quanto o destino final é o caminho para chegar até lá.</span>
-        <span>Estamos sempre buscando orientar negócios por caminhos inteligentes</span>
+        <span>Estamos sempre buscando orientar negócios por caminhos inteligentes.</span>
       `,
     },
   ],
@@ -133,6 +133,127 @@ export const DATA: Map<string, Page> = new Map([
           description: 'A empresa cria um histórico de compra com o exportador.',
         },
       ],
+    },
+  ],
+  [
+    'SERVICES',
+    {
+      header: 'Nossos Serviços',
+      image: 'servicos.png',
+      body: `
+        <span>Nosso foco é simplificar e otimizar suas operações de comércio exterior, através de soluções completas e personalizadas.</span>
+      `,
+      cards: [
+        {
+          icon: 'pi pi-lightbulb',
+          body: `
+            <span>Um novo conceito em comex.</span>
+          `,
+        },
+      ],
+    },
+  ],
+  [
+    'FEATURES',
+    {
+      header: 'Tudo o que sua empresa precisa',
+      image: 'aviao.png',
+      body: `
+        <span>Para importar com segurança em um único lugar.</span>
+      `,
+      topics: [
+        {
+          title: '1',
+          description: 'Homologação de Fornecedores',
+        },
+        {
+          title: '2',
+          description: 'Estudo de Viabilidade',
+        },
+        {
+          title: '3',
+          description: 'Inspeção da Carga',
+        },
+        {
+          title: '4',
+          description: 'Planejamento Tributário',
+        },
+        {
+          title: '5',
+          description: 'Logística Internacional',
+        },
+        {
+          title: '6',
+          description: 'Desembaraço Aduaneiro',
+        },
+        {
+          title: '7',
+          description: 'Linhas de Financiamento',
+        },
+        {
+          title: '8',
+          description: 'Armazenamento da Carga',
+        },
+        {
+          title: '9',
+          description: 'Tradutor e Interprete',
+        },
+        {
+          title: '10',
+          description: 'Acompanhamento a Fábricas e Feiras',
+        },
+      ]
+    },
+  ],
+  [
+    'SEGMENTS',
+    {
+      header: 'Principais Segmentos',
+      image: 'segmentos.png',
+      body: `
+        <span>Somos uma empresa <strong>especializada</strong> na importação de produtos siderúrgicos e materiais de construção civil,
+        especialmente nas linhas de <strong>Ferro e Aço</strong>, <strong>Fixação</strong> e de <strong>Solda</strong> em geral.</span>
+      `,
+      cards: [
+        {
+          header: 'Negócios Internacionais',
+          icon: 'pi pi-globe',
+          body: `
+            <span>Antecipar desafios e oferecer soluções ágeis e personalizadas.</span>
+          `,
+        },
+      ],
+    },
+  ],
+  [
+    'IRON',
+    {
+      header: 'Linha de Ferro e Aço',
+      image: 'ferro.png',
+      body: `
+        <span>A China oferece <strong>+ de 100 siderúrgicas</strong> com vantagens e preços altamente competitivos,
+        ampla variedade de produtos e logística eficiente tornando o país um parceiro estratégico.</span>
+      `,
+    },
+  ],
+  [
+    'FIXATION',
+    {
+      header: 'Linha de Fixação',
+      image: 'fixacao.png',
+      body: `
+        <span>Se você está buscando uma linha completa de fixadores para suas necessidades, a indústria chinesa tem muito a oferecer.</span>
+      `,
+    },
+  ],
+  [
+    'WELDING',
+    {
+      header: 'Linha de Solda em Geral',
+      image: 'solda.png',
+      body: `
+        <span>A China é um dos maiores fabricantes de equipamentos de solda do mundo, oferecendo uma vasta gama de produtos com excelente custo-benefício.</span>
+      `,
     },
   ],
 ]);

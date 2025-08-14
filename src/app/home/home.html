@@ -38,7 +38,8 @@
           [image]="BENEFITS.image">
   <div class="flex justify-content-around my-4 col-12 md:col-6" pageTemplate="mainContent">
     @for (card of BENEFITS.cards; track $index) {
-      <app-card [body]="card.body"
+      <app-card class="w-full"
+                [body]="card.body"
                 [icon]="card.icon"/>
     }
   </div>
@@ -54,3 +55,63 @@
     }
   </p-accordion>
 </div>
+
+<div id="services">
+  <app-page [body]="SERVICES.body"
+            [header]="SERVICES.header"
+            [image]="SERVICES.image"
+            [reversed]="true">
+    <div class="flex justify-content-around my-4 col-12 md:col-6" pageTemplate="mainContent">
+      @for (card of SERVICES.cards; track $index) {
+        <app-card class="w-full"
+                  [body]="card.body"
+                  [icon]="card.icon"/>
+      }
+    </div>
+  </app-page>
+</div>
+
+<app-page [body]="FEATURES.body"
+          [header]="FEATURES.header"
+          [image]="FEATURES.image">
+  <div pageTemplate="mainContent">
+    <div class="col-12 pointer-events-none my-4">
+      @for (topic of FEATURES.topics; track topic.title) {
+        <div class="flex gap-2 mb-2 text-left">
+          <p-checkbox [(ngModel)]="checked" [binary]="true"/>
+          <span>{{ topic.description }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</app-page>
+
+<app-page [body]="SEGMENTS.body"
+          [header]="SEGMENTS.header"
+          [image]="SEGMENTS.image"
+          [reversed]="true">
+  <div class="flex justify-content-around my-4 col-12 md:col-6" pageTemplate="mainContent">
+    @for (card of SEGMENTS.cards; track $index) {
+      <app-card class="w-full"
+                [body]="card.body"
+                [header]="card.header"
+                [icon]="card.icon"/>
+    }
+  </div>
+</app-page>
+
+<app-page [body]="IRON.body"
+          [header]="IRON.header"
+          [image]="IRON.image">
+</app-page>
+
+<app-page [body]="FIXATION.body"
+          [header]="FIXATION.header"
+          [image]="FIXATION.image"
+          [reversed]="true">
+</app-page>
+
+<app-page [body]="WELDING.body"
+          [header]="WELDING.header"
+          [image]="WELDING.image">
+</app-page>
