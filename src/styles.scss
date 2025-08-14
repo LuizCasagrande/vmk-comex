@@ -4,22 +4,54 @@
 
 html, body {
   margin: 0;
+  overflow-x: hidden;
+  position: relative;
+
   font-family: "Noto Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
 
-  background-color: color-mix(in srgb, #18181B, transparent 22%);
-  background-blend-mode: multiply;
-  background-image: url('../public/ferro.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
+body::before {
+  position: absolute;
+  content: '';
+  inset: 0;
+  filter: grayscale(100%);
+  z-index: -1;
+
+  $color: rgba(black, .6);
+  background: linear-gradient($color, $color), url('../public/assessoria.png') fixed center/cover no-repeat;
 }
 
 * {
   outline: none !important;
+}
+
+strong {
+  text-decoration: underline;
+}
+
+h1 {
+  margin: 2rem 0 2rem 0;
+}
+
+h2 {
+  margin: .75rem 0 .75rem 0;
+}
+
+p {
+  margin: 0 0 2rem 0;
+}
+
+div[pagetemplate="right"] {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  div[pagetemplate="right"] {
+    margin-bottom: 0;
+  }
 }
 
 .vmk-image {
@@ -32,18 +64,15 @@ html, body {
 
 .scroll-x {
   overflow-x: scroll;
-  overflow-y: hidden;
   white-space: nowrap
 }
 
 .text-shadow {
   text-shadow: 4px 4px 5px black;
 }
-//
-//@media screen and (min-width: 768px) {
-//  .vmk-image {
-//    img {
-//      width: 85%;
-//    }
-//  }
-//}
+
+.checklist-item {
+  display: flex;
+  margin-bottom: .75rem;
+  gap: .75rem;
+}

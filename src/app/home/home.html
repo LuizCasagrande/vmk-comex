@@ -9,7 +9,8 @@
             [reversed]="true"/>
   <app-page [body]="NUMBERS.body"
             [header]="NUMBERS.header">
-    <div class="flex flex-wrap" pageTemplate="extraContent">
+    <div class="flex flex-wrap"
+         pageTemplate="left">
       @for (card of NUMBERS.cards; track $index) {
         <app-card class="col-6"
                   [body]="card.body"
@@ -23,7 +24,8 @@
           [header]="SOLUTIONS.header"
           [image]="SOLUTIONS.image"
           [reversed]="true">
-  <div class="flex flex-wrap justify-content-around my-4" pageTemplate="mainContent">
+  <div class="flex flex-wrap justify-content-around"
+       pageTemplate="right">
     @for (card of SOLUTIONS.cards; track $index) {
       <app-card class="col-12 md:col-6"
                 [body]="card.body"
@@ -36,7 +38,8 @@
 <app-page [body]="BENEFITS.body"
           [header]="BENEFITS.header"
           [image]="BENEFITS.image">
-  <div class="flex justify-content-around my-4 col-12 md:col-6" pageTemplate="mainContent">
+  <div class="flex justify-content-around col-12 md:col-6"
+       pageTemplate="right">
     @for (card of BENEFITS.cards; track $index) {
       <app-card class="w-full"
                 [body]="card.body"
@@ -46,7 +49,7 @@
 </app-page>
 
 <div class="mx-5">
-  <p-accordion value="0">
+  <p-accordion class="overflow-auto" value="0">
     @for (topic of BENEFITS.topics; track $index) {
       <p-accordion-panel value="{{$index}}">
         <p-accordion-header>{{ topic.title }}</p-accordion-header>
@@ -61,7 +64,8 @@
             [header]="SERVICES.header"
             [image]="SERVICES.image"
             [reversed]="true">
-    <div class="flex justify-content-around my-4 col-12 md:col-6" pageTemplate="mainContent">
+    <div class="flex justify-content-around col-12 md:col-6"
+         pageTemplate="right">
       @for (card of SERVICES.cards; track $index) {
         <app-card class="w-full"
                   [body]="card.body"
@@ -74,15 +78,14 @@
 <app-page [body]="FEATURES.body"
           [header]="FEATURES.header"
           [image]="FEATURES.image">
-  <div pageTemplate="mainContent">
-    <div class="col-12 pointer-events-none my-4">
-      @for (topic of FEATURES.topics; track topic.title) {
-        <div class="flex gap-2 mb-2 text-left">
-          <p-checkbox [(ngModel)]="checked" [binary]="true"/>
-          <span>{{ topic.description }}</span>
-        </div>
-      }
-    </div>
+  <div class="bg-primary-reverse border-round-xl shadow-4 col-12 md:col-8 p-4 scroll-x sm:overflow-hidden"
+       pageTemplate="right">
+    @for (topic of FEATURES.topics; track topic.title) {
+      <div class="checklist-item">
+        <i class="pi pi-check-square text-xl"></i>
+        <span>{{ topic.description }}</span>
+      </div>
+    }
   </div>
 </app-page>
 
@@ -90,7 +93,8 @@
           [header]="SEGMENTS.header"
           [image]="SEGMENTS.image"
           [reversed]="true">
-  <div class="flex justify-content-around my-4 col-12 md:col-6" pageTemplate="mainContent">
+  <div class="flex justify-content-around col-12 md:col-6"
+       pageTemplate="right">
     @for (card of SEGMENTS.cards; track $index) {
       <app-card class="w-full"
                 [body]="card.body"
@@ -102,16 +106,13 @@
 
 <app-page [body]="IRON.body"
           [header]="IRON.header"
-          [image]="IRON.image">
-</app-page>
+          [image]="IRON.image"/>
 
 <app-page [body]="FIXATION.body"
           [header]="FIXATION.header"
           [image]="FIXATION.image"
-          [reversed]="true">
-</app-page>
+          [reversed]="true"/>
 
 <app-page [body]="WELDING.body"
           [header]="WELDING.header"
-          [image]="WELDING.image">
-</app-page>
+          [image]="WELDING.image"/>
