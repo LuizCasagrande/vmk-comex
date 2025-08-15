@@ -1,27 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import "normalize.css/normalize.css";
 @import "primeicons/primeicons.css";
 @import "primeflex/primeflex.css";
 
 html, body {
   margin: 0;
   overflow-x: hidden;
-  position: relative;
 
   font-family: "Noto Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-}
 
-body::before {
-  position: absolute;
-  content: '';
-  inset: 0;
-  filter: grayscale(100%);
-  z-index: -1;
-
-  $color: rgba(black, .6);
-  background: linear-gradient($color, $color), url('../public/assessoria.png') fixed center/cover no-repeat;
+  $color: rgba(black, .5);
+  background: linear-gradient($color, $color), url('../public/background.png') fixed center;
+  background-size: cover;
 }
 
 * {
@@ -75,4 +68,17 @@ div[pagetemplate="right"] {
   display: flex;
   margin-bottom: .75rem;
   gap: .75rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+p-accordion-panel:last-child {
+  border: none;
+
+  .p-accordioncontent-content {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
 }

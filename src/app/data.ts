@@ -25,7 +25,7 @@ export const DATA: Map<string, Page> = new Map([
     'NUMBERS',
     {
       header: 'Nossos Números',
-      image: 'solucoes.png',
+      image: '',
       body: `
         <span>Nossa experiência prática nos permite identificar oportunidades e oferecer soluções inovadoras para impulsionar o crescimento do seu negócio.</span>
       `,
