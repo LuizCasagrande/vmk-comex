@@ -3,6 +3,8 @@ import {DATA} from '../data';
 import {Accordion, AccordionContent, AccordionHeader, AccordionPanel} from 'primeng/accordion';
 import {Card} from '../shared/components/card/card';
 import {Page, PageTemplate} from '../shared/components/page/page';
+import {Image} from 'primeng/image';
+import {Fieldset} from 'primeng/fieldset';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +16,8 @@ import {Page, PageTemplate} from '../shared/components/page/page';
     Card,
     Page,
     PageTemplate,
+    Image,
+    Fieldset,
   ],
   templateUrl: './home.html',
 })
