@@ -88,3 +88,11 @@ p-accordion-panel:last-child {
     border-bottom-right-radius: 6px;
   }
 }
+
+p-fieldset p:last-child {
+  margin-bottom: 0 !important;
+}
+
+app-card p {
+  margin: 0 0 .75rem 0;
+}

@@ -164,43 +164,43 @@ export const DATA: Map<string, Page> = new Map([
       topics: [
         {
           title: '1',
-          description: 'Homologação de Fornecedores',
+          description: 'Homologação de Fornecedores.',
         },
         {
           title: '2',
-          description: 'Estudo de Viabilidade',
+          description: 'Estudo de Viabilidade.',
         },
         {
           title: '3',
-          description: 'Inspeção da Carga',
+          description: 'Inspeção da Carga.',
         },
         {
           title: '4',
-          description: 'Planejamento Tributário',
+          description: 'Planejamento Tributário.',
         },
         {
           title: '5',
-          description: 'Logística Internacional',
+          description: 'Logística Internacional.',
         },
         {
           title: '6',
-          description: 'Desembaraço Aduaneiro',
+          description: 'Desembaraço Aduaneiro.',
         },
         {
           title: '7',
-          description: 'Linhas de Financiamento',
+          description: 'Linhas de Financiamento.',
         },
         {
           title: '8',
-          description: 'Armazenamento da Carga',
+          description: 'Armazenamento da Carga.',
         },
         {
           title: '9',
-          description: 'Tradutor e Interprete',
+          description: 'Tradutor e Interprete.',
         },
         {
           title: '10',
-          description: 'Acompanhamento a Fábricas e Feiras',
+          description: 'Acompanhamento a Fábricas e Feiras.',
         },
       ]
     },
@@ -234,6 +234,17 @@ export const DATA: Map<string, Page> = new Map([
         <span>A China oferece <strong>+ de 100 siderúrgicas</strong> com vantagens e preços altamente competitivos,
         ampla variedade de produtos e logística eficiente tornando o país um parceiro estratégico.</span>
       `,
+      types: [
+        'Bobinas de Aço Carbono.',
+        'Bobinas de Aço Galvanizado.',
+        'Bobinas de Aço Galvalume.',
+        'Bobinas de Aço Chapa Xadrez.',
+        'Bobinas Laminado a quente.',
+        'Bobinas Laminado a frio.',
+        'Tubos.',
+        'Alumínio.',
+      ],
+      typesImage: 'ferro-tipos.png',
     },
   ],
   [
@@ -244,6 +255,18 @@ export const DATA: Map<string, Page> = new Map([
       body: `
         <span>Se você está buscando uma linha completa de fixadores para suas necessidades, a indústria chinesa tem muito a oferecer.</span>
       `,
+      types: [
+        'Parafusos Sextavados.',
+        'Parafusos Allen (Sextavado interno).',
+        'Parafusos de Rosca Máquina.',
+        'Parafusos Auto Atarraxantes.',
+        'Parafusos Chipboard.',
+        'Parafusos Auto Brocantes.',
+        'Chumbador.',
+        'Porcas Sextavadas.',
+        'Arruelas Lisas.',
+      ],
+      typesImage: 'fixacao-tipos.png',
     },
   ],
   [
@@ -254,6 +277,37 @@ export const DATA: Map<string, Page> = new Map([
       body: `
         <span>A China é um dos maiores fabricantes de equipamentos de solda do mundo, oferecendo uma vasta gama de produtos com excelente custo-benefício.</span>
       `,
+      types: [
+        'Eletrodo revestido.',
+        'TIG.',
+        'MIG / MAG.',
+        'Arame tubular.',
+        'Oxigás.',
+        'Abrasivos (Discos de corte, flap, desbaste, diamantados, serra).',
+        'Ferramentas.',
+      ],
+      typesImage: 'solda-tipos.png',
+    },
+  ],
+  [
+    'PROJECT',
+    {
+      header: 'Seu Projeto',
+      image: 'projeto.png',
+      body: `
+        <span>Vamos juntos encontrar a viabilidade de importação para seu negócio?</span>
+        <span class="block mt-3">Aqui é onde tudo começa!</span>
+      `,
+      cards: [
+        {
+          icon: 'pi-trophy',
+          body: 'Transforme desafios em oportunidades.',
+        },
+        {
+          icon: 'pi-key',
+          body: 'Abra a porta para o mercado internacional.',
+        },
+      ],
     },
   ],
 ]);
@@ -264,6 +318,8 @@ interface Page {
   body: string,
   cards?: Card[],
   topics?: Topic[],
+  types?: string[],
+  typesImage?: string,
 }
 
 interface Card {

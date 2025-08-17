@@ -1,0 +1,15 @@
+<div class="flex flex-wrap-reverse bg-primary-reverse border-round-xl align-items-center shadow-4 p-3">
+  <div class="col-12 md:col-6 text-center md:text-left">
+    <p-fieldset legend="Tipos" styleClass="border-2">
+      @for (value of values; track $index) {
+        <p class="m-0 mb-2">{{ value }}</p>
+      }
+    </p-fieldset>
+  </div>
+  <div class="col-12 md:col-6">
+    <p-image [src]="image"
+             alt="header"
+             imageClass="border-2 border-round-2xl border-dashed border-primary-500 shadow-4 p-2"
+             width="222"/>
+  </div>
+</div>

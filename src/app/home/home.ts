@@ -3,8 +3,7 @@ import {DATA} from '../data';
 import {Accordion, AccordionContent, AccordionHeader, AccordionPanel} from 'primeng/accordion';
 import {Card} from '../shared/components/card/card';
 import {Page, PageTemplate} from '../shared/components/page/page';
-import {Image} from 'primeng/image';
-import {Fieldset} from 'primeng/fieldset';
+import {TypeList} from '../shared/components/type-list/type-list';
 
 @Component({
   selector: 'app-home',
@@ -16,8 +15,7 @@ import {Fieldset} from 'primeng/fieldset';
     Card,
     Page,
     PageTemplate,
-    Image,
-    Fieldset,
+    TypeList,
   ],
   templateUrl: './home.html',
 })
@@ -34,4 +32,5 @@ export class Home {
   protected readonly IRON = DATA.get('IRON')!;
   protected readonly FIXATION = DATA.get('FIXATION')!;
   protected readonly WELDING = DATA.get('WELDING')!;
+  protected readonly PROJECT = DATA.get('PROJECT')!;
 }

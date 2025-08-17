@@ -107,34 +107,44 @@
 <app-page [body]="IRON.body"
           [header]="IRON.header"
           [image]="IRON.image">
-  <div class="flex flex-wrap-reverse bg-primary-reverse border-round-xl align-items-center shadow-4 col-12 md:col-10"
+  <div class="col-12 md:col-10"
        pageTemplate="right">
-    <div class="col-12 md:col-6 text-center md:text-left p-3">
-      <p-fieldset legend="Tipos">
-        <p class="m-0 mb-2">Bobinas de Aço Carbono</p>
-        <p class="m-0 mb-2">Bobinas de Aço Galvanizado</p>
-        <p class="m-0 mb-2">Bobinas de Aço Galvalume</p>
-        <p class="m-0 mb-2">Bobinas de Aço Chapa Xadrez</p>
-        <p class="m-0 mb-2">Bobinas Laminado a quente</p>
-        <p class="m-0 mb-2">Bobinas Laminado a frio</p>
-        <p class="m-0 mb-2">Tubos</p>
-        <p class="m-0">Alumínio</p>
-      </p-fieldset>
-    </div>
-    <div class="col-12 md:col-6">
-      <p-image alt="header"
-               imageClass="border-round-2xl border-2 border-dashed shadow-4 p-2"
-               src="ferro-tipos.png"
-               width="222"/>
-    </div>
+    <app-type-list [image]="IRON.typesImage!"
+                   [values]="IRON.types!"/>
   </div>
 </app-page>
 
 <app-page [body]="FIXATION.body"
           [header]="FIXATION.header"
           [image]="FIXATION.image"
-          [reversed]="true"/>
+          [reversed]="true">
+  <div class="col-12 md:col-10"
+       pageTemplate="right">
+    <app-type-list [image]="FIXATION.typesImage!"
+                   [values]="FIXATION.types!"/>
+  </div>
+</app-page>
 
 <app-page [body]="WELDING.body"
           [header]="WELDING.header"
-          [image]="WELDING.image"/>
+          [image]="WELDING.image">
+  <div class="col-12 md:col-10"
+       pageTemplate="right">
+    <app-type-list [image]="WELDING.typesImage!"
+                   [values]="WELDING.types!"/>
+  </div>
+</app-page>
+
+<app-page [body]="PROJECT.body"
+          [header]="PROJECT.header"
+          [image]="PROJECT.image"
+          [reversed]="true">
+  <div class="flex flex-wrap justify-content-around"
+       pageTemplate="right">
+    @for (card of PROJECT.cards; track $index) {
+      <app-card class="col-12 md:col-6"
+                [body]="card.body"
+                [icon]="card.icon"/>
+    }
+  </div>
+</app-page>
