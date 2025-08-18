@@ -1,9 +1,10 @@
 import {Component} from '@angular/core';
-import {DATA} from '../data';
+import {DATA, PROJECT_STEPS} from '../data';
 import {Accordion, AccordionContent, AccordionHeader, AccordionPanel} from 'primeng/accordion';
 import {Card} from '../shared/components/card/card';
 import {Page, PageTemplate} from '../shared/components/page/page';
 import {TypeList} from '../shared/components/type-list/type-list';
+import {ProjectSteps} from '../project-steps/project-steps';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +17,7 @@ import {TypeList} from '../shared/components/type-list/type-list';
     Page,
     PageTemplate,
     TypeList,
+    ProjectSteps,
   ],
   templateUrl: './home.html',
 })
@@ -33,4 +35,5 @@ export class Home {
   protected readonly FIXATION = DATA.get('FIXATION')!;
   protected readonly WELDING = DATA.get('WELDING')!;
   protected readonly PROJECT = DATA.get('PROJECT')!;
+  protected readonly PROJECT_STEPS = PROJECT_STEPS;
 }

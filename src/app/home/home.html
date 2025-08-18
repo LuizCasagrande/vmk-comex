@@ -135,10 +135,17 @@
   </div>
 </app-page>
 
+<app-page [image]="PROJECT.image"
+          [reversed]="true"
+          body="Gerenciamento completo de processos, de ponta a ponta."
+          header="Etapas do Projeto">
+</app-page>
+
+<app-project-steps [data]="PROJECT_STEPS"/>
+
 <app-page [body]="PROJECT.body"
           [header]="PROJECT.header"
-          [image]="PROJECT.image"
-          [reversed]="true">
+          [image]="PROJECT.image">
   <div class="flex flex-wrap justify-content-around"
        pageTemplate="right">
     @for (card of PROJECT.cards; track $index) {

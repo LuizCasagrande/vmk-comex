@@ -1,0 +1,48 @@
+<div class="bg-primary-reverse border-round-xl p-2 mx-5">
+  <p-tabs value="0">
+    <p-tablist>
+      <p-tab value="0">Parte 1</p-tab>
+      <p-tab value="1">Parte 2</p-tab>
+    </p-tablist>
+    <p-tabpanels>
+      <p-tabpanel value="0">
+        <p-timeline [value]="data[0].steps" align="alternate" class="mt-3">
+          <ng-template let-step pTemplate="marker">
+            <p-badge [value]="data[0].steps.indexOf(step) + 1"/>
+          </ng-template>
+          <ng-template let-step pTemplate="content">
+            <div class="border-round-xl border-2 border-dashed border-primary-500 text-center p-4">
+              <i class="pi {{step.icon}} text-xl"></i>
+              <h2 class="uppercase font-normal text-2xl">{{ step.title }}</h2>
+              <p class="m-0">{{ step.description }}</p>
+            </div>
+          </ng-template>
+        </p-timeline>
+        <ul>
+          @for (info of data[0].additionalInfo; track $index) {
+            <li>{{ info }}</li>
+          }
+        </ul>
+      </p-tabpanel>
+      <p-tabpanel value="1">
+        <p-timeline [value]="data[1].steps" align="alternate" class="mt-3">
+          <ng-template let-step pTemplate="marker">
+            <p-badge [value]="data[1].steps.indexOf(step) + 4"/>
+          </ng-template>
+          <ng-template let-step pTemplate="content">
+            <div class="border-round-xl border-2 border-dashed border-primary-500 text-center p-4">
+              <i class="pi {{step.icon}} text-xl"></i>
+              <h2 class="uppercase font-normal text-2xl">{{ step.title }}</h2>
+              <p class="m-0">{{ step.description }}</p>
+            </div>
+          </ng-template>
+        </p-timeline>
+        <ul>
+          @for (info of data[1].additionalInfo; track $index) {
+            <li>{{ info }}</li>
+          }
+        </ul>
+      </p-tabpanel>
+    </p-tabpanels>
+  </p-tabs>
+</div>

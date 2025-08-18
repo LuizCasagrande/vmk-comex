@@ -96,3 +96,29 @@ p-fieldset p:last-child {
 app-card p {
   margin: 0 0 .75rem 0;
 }
+
+li + li {
+  margin-top: .5rem;
+}
+
+p-timeline {
+  .p-timeline-event-content {
+    margin-bottom: 1.5rem;
+
+    div {
+      width: 14rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  p-timeline {
+    .p-timeline-event-content {
+      margin-bottom: 0;
+
+      div {
+        width: auto;
+      }
+    }
+  }
+}

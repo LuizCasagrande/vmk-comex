@@ -1,3 +1,67 @@
+export interface Steps {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface ProjectSteps {
+  steps: Steps[];
+  additionalInfo: string[];
+}
+
+export const PROJECT_STEPS: ProjectSteps[] = [
+  {
+    steps: [
+      {
+        title: 'Diagnóstico',
+        description: 'Identificação das necessidades e definição de escopo.',
+        icon: 'pi-search',
+      },
+      {
+        title: 'Orçamento',
+        description: 'Conforme demanda, aplicamos um estudo de viabilidade.',
+        icon: 'pi-dollar',
+      },
+      {
+        title: 'Amostras',
+        description: 'Amostras iniciais de produtos e de embalagens.',
+        icon: 'pi-box',
+      },
+    ],
+    additionalInfo: [
+      'Habilitação do radar Siscomex;',
+      'Busca dos melhores fornecedores, melhores preços e qualidade;',
+      'Simulação e estimativas de custos;',
+      'Preparação de auditoria e inspeções de qualidade.',
+    ],
+  },
+  {
+    steps: [
+      {
+        title: 'Pedido',
+        description: 'Negociação, compra e negociação do pagamento.',
+        icon: 'pi-shopping-cart',
+      },
+      {
+        title: 'Checagem',
+        description: 'Acompanhamento da produção e inspeções.',
+        icon: 'pi-eye',
+      },
+      {
+        title: 'Entrega',
+        description: 'Rastreio da carga e desembaraço aduaneiro.',
+        icon: 'pi-truck',
+      },
+    ],
+    additionalInfo: [
+      'Contrato junto ao fornecedor para efetivação de pagamento e certificação das garantias de entrega;',
+      'Acompanhamento da produção em todas as etapas;',
+      'Inspeção de qualidade antes do embarque;',
+      'Rastreio e acompanhamento da carga e de todo desembaraço aduaneiro.',
+    ],
+  },
+];
+
 export const DATA: Map<string, Page> = new Map([
   [
     'ADVICE',
@@ -296,7 +360,7 @@ export const DATA: Map<string, Page> = new Map([
       image: 'projeto.png',
       body: `
         <span>Vamos juntos encontrar a viabilidade de importação para seu negócio?</span>
-        <span class="block mt-3">Aqui é onde tudo começa!</span>
+        <strong class="block mt-3">Aqui é onde tudo começa!</strong>
       `,
       cards: [
         {
