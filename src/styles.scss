@@ -43,16 +43,6 @@ p {
   margin: 0 0 2rem 0;
 }
 
-div[pagetemplate='right'] {
-  margin-bottom: 2rem;
-}
-
-@media screen and (min-width: 768px) {
-  div[pagetemplate='right'] {
-    margin-bottom: 0;
-  }
-}
-
 .vmk-image {
   img {
     width: 85%;
@@ -101,6 +91,10 @@ li + li {
   margin-top: .5rem;
 }
 
+div[pagetemplate='right'] {
+  margin-bottom: 2rem;
+}
+
 p-timeline {
   .p-timeline-event-content {
     margin-bottom: 1.5rem;
@@ -112,6 +106,10 @@ p-timeline {
 }
 
 @media screen and (min-width: 768px) {
+  div[pagetemplate='right'] {
+    margin-bottom: 0;
+  }
+
   p-timeline {
     .p-timeline-event-content {
       margin-bottom: 0;

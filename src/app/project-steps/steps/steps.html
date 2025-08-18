@@ -1,0 +1,17 @@
+<p-timeline [value]="data.steps" align="alternate">
+  <ng-template let-step pTemplate="marker">
+    <p-badge [value]="data.steps.indexOf(step) + countStart"/>
+  </ng-template>
+  <ng-template let-step pTemplate="content">
+    <div class="border-round-xl border-2 border-dashed border-primary-500 text-center p-4">
+      <i class="pi {{step.icon}} text-xl"></i>
+      <h2 class="uppercase font-normal text-2xl">{{ step.title }}</h2>
+      <p class="m-0">{{ step.description }}</p>
+    </div>
+  </ng-template>
+</p-timeline>
+<ul>
+  @for (info of data.additionalInfo; track $index) {
+    <li>{{ info }}</li>
+  }
+</ul>
