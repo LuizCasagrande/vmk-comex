@@ -31,23 +31,32 @@ strong {
   text-decoration: underline;
 }
 
-h1 {
-  margin: 2rem 0 2rem 0;
-}
-
-h2 {
-  margin: .75rem 0 .75rem 0;
-}
-
 p {
+  margin: 0;
+}
+
+app-page p {
   margin: 0 0 2rem 0;
 }
 
-.vmk-image {
-  img {
-    width: 85%;
-    height: 85%;
-    border-radius: 1rem;
+app-card p {
+  margin: 0 0 .75rem 0;
+}
+
+app-page, app-card, app-steps {
+  h1 {
+    margin: 2rem 0 2rem 0;
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    margin: .75rem 0 .75rem 0;
+    font-size: 1.5rem;
+  }
+
+  h1, h2 {
+    font-weight: 400;
+    text-transform: uppercase;
   }
 }
 
@@ -60,48 +69,55 @@ p {
   text-shadow: 4px 4px 5px black;
 }
 
+.vmk-image {
+  img {
+    width: 85%;
+    height: 85%;
+    border-radius: 1rem;
+  }
+}
+
 .checklist-item {
   display: flex;
-  margin-bottom: .75rem;
   gap: .75rem;
 
-  &:last-child {
-    margin-bottom: 0;
+  + .checklist-item {
+    margin-top: .75rem;
+  }
+}
+
+app-type-list p {
+  margin: 0;
+
+  + p {
+    margin-top: .5rem;
+  }
+}
+
+app-steps li {
+  + li {
+    margin-top: .5rem;
   }
 }
 
 p-accordion-panel:last-child {
   border: none;
 
-  .p-accordioncontent-content {
+  p-accordion-content div {
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
   }
-}
-
-p-fieldset p:last-child {
-  margin-bottom: 0 !important;
-}
-
-app-card p {
-  margin: 0 0 .75rem 0;
-}
-
-li + li {
-  margin-top: .5rem;
 }
 
 div[pagetemplate='right'] {
   margin-bottom: 2rem;
 }
 
-p-timeline {
-  .p-timeline-event-content {
-    margin-bottom: 1.5rem;
+p-timeline .p-timeline-event-content {
+  margin-bottom: 1.5rem;
 
-    div {
-      width: 14rem;
-    }
+  div {
+    width: 14rem;
   }
 }
 
@@ -110,13 +126,11 @@ p-timeline {
     margin-bottom: 0;
   }
 
-  p-timeline {
-    .p-timeline-event-content {
-      margin-bottom: 0;
+  p-timeline .p-timeline-event-content {
+    margin-bottom: 0;
 
-      div {
-        width: auto;
-      }
+    div {
+      width: auto;
     }
   }
 }
