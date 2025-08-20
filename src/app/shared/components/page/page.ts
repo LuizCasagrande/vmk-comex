@@ -1,6 +1,7 @@
 import {Component, Directive, Input} from '@angular/core';
 import {Image} from "primeng/image";
 import {NgClass} from '@angular/common';
+import {PageDto} from '../../../data/page-dto';
 
 @Component({
   selector: 'app-page',
@@ -13,13 +14,7 @@ import {NgClass} from '@angular/common';
 export class Page {
 
   @Input()
-  header = '';
-
-  @Input()
-  body = '';
-
-  @Input()
-  image = '';
+  data: PageDto = {} as PageDto;
 
   @Input()
   reversed = false;
@@ -29,5 +24,6 @@ export class Page {
   selector: '[pageTemplate]',
 })
 export class PageTemplate {
+
   @Input() template!: string;
 }

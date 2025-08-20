@@ -82,7 +82,7 @@ app-page, app-card, app-steps {
   }
 }
 
-app-type-list p {
+app-list p {
   + p {
     margin-top: .5rem;
   }
@@ -103,7 +103,7 @@ p-accordion-panel:last-child {
   }
 }
 
-div[pagetemplate='right'] {
+div[pagetemplate='main'] {
   margin-bottom: 2rem;
 }
 
@@ -117,7 +117,7 @@ p-timeline .p-timeline-event-content {
 }
 
 @media screen and (min-width: 768px) {
-  div[pagetemplate='right'] {
+  div[pagetemplate='main'] {
     margin-bottom: 0;
   }
 

@@ -1,7 +1,7 @@
 <div class="flex flex-wrap-reverse bg-primary-reverse border-round-xl align-items-center shadow-4 p-3">
   <div class="col-12 md:col-6 text-center md:text-left">
     <p-fieldset legend="Tipos" styleClass="border-2">
-      @for (value of values; track $index) {
+      @for (value of items; track $index) {
         <p>{{ value }}</p>
       }
     </p-fieldset>

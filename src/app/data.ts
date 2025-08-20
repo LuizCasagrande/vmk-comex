@@ -1,15 +1,7 @@
-export interface Steps {
-  title: string;
-  description: string;
-  icon: string;
-}
+import {StepsDto} from './data/step-dto';
+import {PageDto} from './data/page-dto';
 
-export interface ProjectSteps {
-  steps: Steps[];
-  additionalInfo: string[];
-}
-
-export const PROJECT_STEPS: ProjectSteps[] = [
+export const PROJECT_STEPS: StepsDto[] = [
   {
     steps: [
       {
@@ -28,7 +20,7 @@ export const PROJECT_STEPS: ProjectSteps[] = [
         icon: 'pi-box',
       },
     ],
-    additionalInfo: [
+    info: [
       'Habilitação do radar Siscomex;',
       'Busca dos melhores fornecedores, melhores preços e qualidade;',
       'Simulação e estimativas de custos;',
@@ -53,7 +45,7 @@ export const PROJECT_STEPS: ProjectSteps[] = [
         icon: 'pi-truck',
       },
     ],
-    additionalInfo: [
+    info: [
       'Contrato junto ao fornecedor para efetivação de pagamento e certificação das garantias de entrega;',
       'Acompanhamento da produção em todas as etapas;',
       'Inspeção de qualidade antes do embarque;',
@@ -62,7 +54,7 @@ export const PROJECT_STEPS: ProjectSteps[] = [
   },
 ];
 
-export const DATA: Map<string, Page> = new Map([
+export const DATA: Map<string, PageDto> = new Map([
   [
     'ADVICE',
     {
@@ -298,7 +290,7 @@ export const DATA: Map<string, Page> = new Map([
         <span>A China oferece <strong>+ de 100 siderúrgicas</strong> com vantagens e preços altamente competitivos,
         ampla variedade de produtos e logística eficiente tornando o país um parceiro estratégico.</span>
       `,
-      types: [
+      listItems: [
         'Bobinas de Aço Carbono.',
         'Bobinas de Aço Galvanizado.',
         'Bobinas de Aço Galvalume.',
@@ -308,7 +300,7 @@ export const DATA: Map<string, Page> = new Map([
         'Tubos.',
         'Alumínio.',
       ],
-      typesImage: 'ferro-tipos.png',
+      listImage: 'ferro-tipos.png',
     },
   ],
   [
@@ -319,7 +311,7 @@ export const DATA: Map<string, Page> = new Map([
       body: `
         <span>Se você está buscando uma linha completa de fixadores para suas necessidades, a indústria chinesa tem muito a oferecer.</span>
       `,
-      types: [
+      listItems: [
         'Parafusos Sextavados.',
         'Parafusos Allen (Sextavado interno).',
         'Parafusos de Rosca Máquina.',
@@ -330,7 +322,7 @@ export const DATA: Map<string, Page> = new Map([
         'Porcas Sextavadas.',
         'Arruelas Lisas.',
       ],
-      typesImage: 'fixacao-tipos.png',
+      listImage: 'fixacao-tipos.png',
     },
   ],
   [
@@ -341,7 +333,7 @@ export const DATA: Map<string, Page> = new Map([
       body: `
         <span>A China é um dos maiores fabricantes de equipamentos de solda do mundo, oferecendo uma vasta gama de produtos com excelente custo-benefício.</span>
       `,
-      types: [
+      listItems: [
         'Eletrodo revestido.',
         'TIG.',
         'MIG / MAG.',
@@ -350,7 +342,7 @@ export const DATA: Map<string, Page> = new Map([
         'Abrasivos (Discos de corte, flap, desbaste, diamantados, serra).',
         'Ferramentas.',
       ],
-      typesImage: 'solda-tipos.png',
+      listImage: 'solda-tipos.png',
     },
   ],
   [
@@ -375,24 +367,3 @@ export const DATA: Map<string, Page> = new Map([
     },
   ],
 ]);
-
-interface Page {
-  header: string,
-  image: string,
-  body: string,
-  cards?: Card[],
-  topics?: Topic[],
-  types?: string[],
-  typesImage?: string,
-}
-
-interface Card {
-  header?: string,
-  icon: string,
-  body: string,
-}
-
-interface Topic {
-  title: string,
-  description: string,
-}

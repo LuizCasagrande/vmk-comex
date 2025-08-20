@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {CardDto} from '../../../data/card-dto';
 
 @Component({
   selector: 'app-card',
@@ -7,11 +8,5 @@ import {Component, Input} from '@angular/core';
 export class Card {
 
   @Input()
-  header? = '';
-
-  @Input()
-  body = '';
-
-  @Input()
-  icon = '';
+  data: CardDto = {} as CardDto;
 }

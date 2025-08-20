@@ -3,10 +3,10 @@ import {DATA, PROJECT_STEPS} from '../data';
 import {Accordion, AccordionContent, AccordionHeader, AccordionPanel} from 'primeng/accordion';
 import {Card} from '../shared/components/card/card';
 import {Page, PageTemplate} from '../shared/components/page/page';
-import {TypeList} from '../shared/components/type-list/type-list';
+import {List} from '../shared/components/list/list';
 import {ProjectSteps} from '../project-steps/project-steps';
 import {environment} from '../../environments/environment';
-import {Button} from 'primeng/button';
+import {Links} from '../shared/components/links/links';
 
 @Component({
   selector: 'app-home',
@@ -18,9 +18,9 @@ import {Button} from 'primeng/button';
     Card,
     Page,
     PageTemplate,
-    TypeList,
+    List,
     ProjectSteps,
-    Button,
+    Links,
   ],
   templateUrl: './home.html',
 })
@@ -39,8 +39,6 @@ export class Home {
   protected readonly WELDING = DATA.get('WELDING')!;
   protected readonly PROJECT = DATA.get('PROJECT')!;
   protected readonly PROJECT_STEPS = PROJECT_STEPS;
-  protected readonly PHONE = environment.phone;
-  protected readonly EMAIL = environment.email;
 
-  protected readonly ADDRESS_SPLIT = environment.address.split(',');
+  protected readonly ADDRESS_PARTS = environment.address.split(',');
 }

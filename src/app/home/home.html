@@ -1,49 +1,29 @@
-<app-page [body]="ADVICE.body"
-          [header]="ADVICE.header"
-          [image]="ADVICE.image"/>
+<app-page [data]="ADVICE"/>
 
 <div id="aboutUs">
-  <app-page [body]="ABOUT.body"
-            [header]="ABOUT.header"
-            [image]="ABOUT.image"
-            [reversed]="true"/>
-  <app-page [body]="NUMBERS.body"
-            [header]="NUMBERS.header">
-    <div class="flex flex-wrap"
-         pageTemplate="left">
+  <app-page [data]="ABOUT" [reversed]="true"/>
+
+  <app-page [data]="NUMBERS">
+    <div class="flex flex-wrap" pageTemplate="extra">
       @for (card of NUMBERS.cards; track $index) {
-        <app-card class="col-6"
-                  [body]="card.body"
-                  [icon]="card.icon"/>
+        <app-card class="col-6" [data]="card"/>
       }
     </div>
   </app-page>
 </div>
 
-<app-page [body]="SOLUTIONS.body"
-          [header]="SOLUTIONS.header"
-          [image]="SOLUTIONS.image"
-          [reversed]="true">
-  <div class="flex flex-wrap justify-content-around"
-       pageTemplate="right">
+<app-page [data]="SOLUTIONS" [reversed]="true">
+  <div class="flex flex-wrap justify-content-around" pageTemplate="main">
     @for (card of SOLUTIONS.cards; track $index) {
-      <app-card class="col-12 md:col-6"
-                [body]="card.body"
-                [header]="card.header"
-                [icon]="card.icon"/>
+      <app-card class="col-12 md:col-6" [data]="card"/>
     }
   </div>
 </app-page>
 
-<app-page [body]="BENEFITS.body"
-          [header]="BENEFITS.header"
-          [image]="BENEFITS.image">
-  <div class="flex justify-content-around col-12 md:col-6"
-       pageTemplate="right">
+<app-page [data]="BENEFITS">
+  <div class="flex justify-content-around col-12 md:col-6" pageTemplate="main">
     @for (card of BENEFITS.cards; track $index) {
-      <app-card class="w-full"
-                [body]="card.body"
-                [icon]="card.icon"/>
+      <app-card class="w-full" [data]="card"/>
     }
   </div>
 </app-page>
@@ -60,26 +40,18 @@
 </div>
 
 <div id="services">
-  <app-page [body]="SERVICES.body"
-            [header]="SERVICES.header"
-            [image]="SERVICES.image"
-            [reversed]="true">
-    <div class="flex justify-content-around col-12 md:col-6"
-         pageTemplate="right">
+  <app-page [data]="SERVICES" [reversed]="true">
+    <div class="flex justify-content-around col-12 md:col-6" pageTemplate="main">
       @for (card of SERVICES.cards; track $index) {
-        <app-card class="w-full"
-                  [body]="card.body"
-                  [icon]="card.icon"/>
+        <app-card class="w-full" [data]="card"/>
       }
     </div>
   </app-page>
 </div>
 
-<app-page [body]="FEATURES.body"
-          [header]="FEATURES.header"
-          [image]="FEATURES.image">
+<app-page [data]="FEATURES">
   <div class="bg-primary-reverse border-round-xl shadow-4 col-12 md:col-8 p-4 scroll-x sm:overflow-hidden"
-       pageTemplate="right">
+       pageTemplate="main">
     @for (topic of FEATURES.topics; track topic.title) {
       <div class="checklist-item">
         <i class="pi pi-check-square text-xl"></i>
@@ -89,93 +61,55 @@
   </div>
 </app-page>
 
-<app-page [body]="SEGMENTS.body"
-          [header]="SEGMENTS.header"
-          [image]="SEGMENTS.image"
-          [reversed]="true">
-  <div class="flex justify-content-around col-12 md:col-6"
-       pageTemplate="right">
+<app-page [data]="SEGMENTS" [reversed]="true">
+  <div class="flex justify-content-around col-12 md:col-6" pageTemplate="main">
     @for (card of SEGMENTS.cards; track $index) {
-      <app-card class="w-full"
-                [body]="card.body"
-                [header]="card.header"
-                [icon]="card.icon"/>
+      <app-card class="w-full" [data]="card"/>
     }
   </div>
 </app-page>
 
-<app-page [body]="IRON.body"
-          [header]="IRON.header"
-          [image]="IRON.image">
-  <div class="col-12 md:col-10"
-       pageTemplate="right">
-    <app-type-list [image]="IRON.typesImage!"
-                   [values]="IRON.types!"/>
+<app-page [data]="IRON">
+  <div class="col-12 md:col-10" pageTemplate="main">
+    <app-list [image]="IRON.listImage!" [items]="IRON.listItems!"/>
   </div>
 </app-page>
 
-<app-page [body]="FIXATION.body"
-          [header]="FIXATION.header"
-          [image]="FIXATION.image"
+<app-page [data]="FIXATION"
           [reversed]="true">
-  <div class="col-12 md:col-10"
-       pageTemplate="right">
-    <app-type-list [image]="FIXATION.typesImage!"
-                   [values]="FIXATION.types!"/>
+  <div class="col-12 md:col-10" pageTemplate="main">
+    <app-list [image]="FIXATION.listImage!" [items]="FIXATION.listItems!"/>
   </div>
 </app-page>
 
-<app-page [body]="WELDING.body"
-          [header]="WELDING.header"
-          [image]="WELDING.image">
-  <div class="col-12 md:col-10"
-       pageTemplate="right">
-    <app-type-list [image]="WELDING.typesImage!"
-                   [values]="WELDING.types!"/>
+<app-page [data]="WELDING">
+  <div class="col-12 md:col-10" pageTemplate="main">
+    <app-list [image]="WELDING.listImage!" [items]="WELDING.listItems!"/>
   </div>
 </app-page>
 
-<app-page [reversed]="true"
-          body="Gerenciamento completo de processos, de ponta a ponta."
-          header="Etapas do Projeto"
-          image="projeto-etapas.png"/>
+<app-page
+  [data]="{'body': 'Gerenciamento completo de processos, de ponta a ponta.', 'header': 'Etapas do Projeto', 'image': 'projeto-etapas.png'}"
+  [reversed]="true"/>
 
 <app-project-steps [data]="PROJECT_STEPS"/>
 
-<app-page [body]="PROJECT.body"
-          [header]="PROJECT.header"
-          [image]="PROJECT.image">
-  <div class="flex flex-wrap justify-content-around"
-       pageTemplate="right">
+<app-page [data]="PROJECT">
+  <div class="flex flex-wrap justify-content-around" pageTemplate="main">
     @for (card of PROJECT.cards; track $index) {
-      <app-card class="col-12 md:col-6"
-                [body]="card.body"
-                [icon]="card.icon"/>
+      <app-card class="col-12 md:col-6" [data]="card"/>
     }
   </div>
 </app-page>
 
 <div id="contact">
-  <app-page [reversed]="true"
-            body="Fale conosco."
-            header="Obrigado!"
-            image="contato.png">
-    <div pageTemplate="right">
-      <div>
-        <a href="https://api.whatsapp.com/send?phone={{PHONE}}" target="_blank">
-          <p-button icon="pi pi-whatsapp" size="large" variant="text"/>
-        </a>
-        <a href="https://www.instagram.com/vmkcomex" target="_blank">
-          <p-button icon="pi pi-instagram" size="large" variant="text"/>
-        </a>
-        <a href="mailto:{{EMAIL}}" target="_blank">
-          <p-button icon="pi pi-envelope" size="large" variant="text"/>
-        </a>
-      </div>
+  <app-page [data]="{'body': 'Fale conosco.', 'header': 'Obrigado!', 'image': 'contato.png'}" [reversed]="true">
+    <div pageTemplate="main">
+      <app-links/>
       <div class="mt-2">
         <strong>Endereço:</strong>
-        <div class="mt-1">{{ ADDRESS_SPLIT[0] + ',' + ADDRESS_SPLIT[1] + ',' }}</div>
-        <div>{{ ADDRESS_SPLIT[2] + ',' + ADDRESS_SPLIT[3] }}</div>
+        <div class="mt-1">{{ ADDRESS_PARTS[0] + ',' + ADDRESS_PARTS[1] + ',' }}</div>
+        <div>{{ ADDRESS_PARTS[2] + ',' + ADDRESS_PARTS[3] }}</div>
       </div>
     </div>
   </app-page>

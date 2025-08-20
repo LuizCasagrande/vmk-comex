@@ -3,17 +3,17 @@ import {Fieldset} from 'primeng/fieldset';
 import {Image} from 'primeng/image';
 
 @Component({
-  selector: 'app-type-list',
+  selector: 'app-list',
   imports: [
     Fieldset,
     Image,
   ],
-  templateUrl: './type-list.html',
+  templateUrl: './list.html',
 })
-export class TypeList {
+export class List {
 
   @Input()
-  values = [''];
+  items = [''];
 
   @Input()
   image = '';

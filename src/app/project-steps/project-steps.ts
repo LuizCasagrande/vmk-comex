@@ -1,6 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {Tab, TabList, TabPanel, TabPanels, Tabs} from "primeng/tabs";
 import {Steps} from './steps/steps';
+import {StepsDto} from '../data/step-dto';
 
 @Component({
   selector: 'app-project-steps',
@@ -17,5 +18,5 @@ import {Steps} from './steps/steps';
 export class ProjectSteps {
 
   @Input()
-  data: any[] = [];
+  data: StepsDto[] = [];
 }

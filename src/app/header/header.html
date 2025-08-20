@@ -14,15 +14,7 @@
       <p-button (onClick)="scrollTo('contact')" label="Contato" variant="text"/>
     </div>
     <div class="w-12 md:w-3 text-center md:text-right">
-      <a href="https://api.whatsapp.com/send?phone={{PHONE}}" target="_blank">
-        <p-button icon="pi pi-whatsapp" size="large" variant="text"/>
-      </a>
-      <a href="https://www.instagram.com/vmkcomex" target="_blank">
-        <p-button icon="pi pi-instagram" size="large" variant="text"/>
-      </a>
-      <a href="mailto:{{EMAIL}}" target="_blank">
-        <p-button icon="pi pi-envelope" size="large" variant="text"/>
-      </a>
+      <app-links/>
     </div>
   </div>
 </header>
