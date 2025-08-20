@@ -21,6 +21,7 @@ npm-debug.log
 testem.log
 typings/
 .angular/
+/src/environments/environment.ts
 
 # e2e
 e2e/*.js

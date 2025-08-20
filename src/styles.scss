@@ -35,12 +35,8 @@ p {
   margin: 0;
 }
 
-app-page p {
-  margin: 0 0 2rem 0;
-}
-
-app-card p {
-  margin: 0 0 .75rem 0;
+.card-p {
+  margin-bottom: .75rem;
 }
 
 app-page, app-card, app-steps {
@@ -87,8 +83,6 @@ app-page, app-card, app-steps {
 }
 
 app-type-list p {
-  margin: 0;
-
   + p {
     margin-top: .5rem;
   }
@@ -117,7 +111,8 @@ p-timeline .p-timeline-event-content {
   margin-bottom: 1.5rem;
 
   div {
-    width: 14rem;
+    width: 13rem;
+    height: 12rem;
   }
 }
 
@@ -131,6 +126,7 @@ p-timeline .p-timeline-event-content {
 
     div {
       width: auto;
+      height: auto;
     }
   }
 }

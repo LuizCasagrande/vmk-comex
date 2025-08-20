@@ -5,6 +5,8 @@ import {Card} from '../shared/components/card/card';
 import {Page, PageTemplate} from '../shared/components/page/page';
 import {TypeList} from '../shared/components/type-list/type-list';
 import {ProjectSteps} from '../project-steps/project-steps';
+import {environment} from '../../environments/environment';
+import {Button} from 'primeng/button';
 
 @Component({
   selector: 'app-home',
@@ -18,6 +20,7 @@ import {ProjectSteps} from '../project-steps/project-steps';
     PageTemplate,
     TypeList,
     ProjectSteps,
+    Button,
   ],
   templateUrl: './home.html',
 })
@@ -36,4 +39,7 @@ export class Home {
   protected readonly WELDING = DATA.get('WELDING')!;
   protected readonly PROJECT = DATA.get('PROJECT')!;
   protected readonly PROJECT_STEPS = PROJECT_STEPS;
+  protected readonly PHONE = environment.phone;
+  protected readonly EMAIL = environment.email;
+  protected readonly ADDRESS = environment.address;
 }
