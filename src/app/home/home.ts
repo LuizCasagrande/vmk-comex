@@ -41,5 +41,6 @@ export class Home {
   protected readonly PROJECT_STEPS = PROJECT_STEPS;
   protected readonly PHONE = environment.phone;
   protected readonly EMAIL = environment.email;
-  protected readonly ADDRESS = environment.address;
+
+  protected readonly ADDRESS_SPLIT = environment.address.split(',');
 }
