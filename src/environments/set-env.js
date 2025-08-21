@@ -5,6 +5,7 @@ const file = `export const environment = {
   phone: '${process.env.PHONE}',
   email: '${process.env.EMAIL}',
   address: '${process.env.ADDRESS}',
+  drive: '${process.env.DRIVE}',
 };
 `;
 
