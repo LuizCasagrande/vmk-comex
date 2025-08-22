@@ -6,20 +6,19 @@
 html, body {
   margin: 0;
   height: 100dvh;
-  overflow-x: hidden;
 
   font-family: 'Noto Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 
-  background-color: color-mix(in srgb, #18181b, transparent 33%);
-  background-blend-mode: multiply;
-  background-image: url('../public/background.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
+  //background-color: color-mix(in srgb, #18181b, transparent 33%);
+  //background-blend-mode: multiply;
+  //background-image: url('../public/background.png');
+  //background-repeat: no-repeat;
+  //background-position: center;
+  //background-attachment: fixed;
+  //background-size: cover;
 }
 
 * {
@@ -135,5 +134,13 @@ p-timeline .p-timeline-event-content {
       width: auto;
       height: auto;
     }
+  }
+
+  body {
+    padding-top: 10rem;
+  }
+
+  * {
+    scroll-margin-top: 10rem;
   }
 }
