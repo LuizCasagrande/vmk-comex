@@ -6,27 +6,20 @@
 html, body {
   margin: 0;
   height: 100dvh;
+  overflow-x: hidden;
 
   font-family: 'Noto Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-}
 
-.bg {
   background-color: color-mix(in srgb, #18181b, transparent 33%);
   background-blend-mode: multiply;
   background-image: url('../public/background.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-size: cover;
-}
-
-@supports not (-webkit-touch-callout: none) {
-  .bg {
-    background-attachment: fixed;
-  }
 }
 
 * {
