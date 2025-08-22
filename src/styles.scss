@@ -13,11 +13,7 @@ html, body {
   font-style: normal;
 }
 
-.background {
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  position: fixed;
+body {
   overflow-x: hidden;
 
   background-color: color-mix(in srgb, #18181b, transparent 33%);
