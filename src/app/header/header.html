@@ -1,13 +1,13 @@
-<header class="bg-primary-reverse shadow-4">
-  <div class="flex flex-wrap align-items-center justify-content-between p-4">
-    <div class="w-12 md:w-3 text-center md:text-left">
+<header #header class="bg-primary-reverse shadow-4 sm:fixed w-full top-0 z-5">
+  <div class="flex flex-wrap align-items-center justify-content-around text-center">
+    <div class="w-12 md:w-3 md:text-left">
       <img alt="VMK Comex"
-           class="cursor-pointer border-circle"
+           class="cursor-pointer border-circle my-3"
            height="125"
            ngSrc="logo.png"
            width="125"/>
     </div>
-    <div class="w-12 md:w-6 text-center py-2 md:py-0 scroll-x sm:overflow-hidden">
+    <div class="w-12 md:w-5 scroll-x sm:overflow-hidden">
       <p-button (onClick)="scrollTo('aboutUs')" label="Nós" variant="text"/>
       <p-button (onClick)="scrollTo('services')" label="Produtos/Serviços" variant="text"/>
       <a [href]="DRIVE_LINK" target="_blank">
@@ -15,8 +15,11 @@
       </a>
       <p-button (onClick)="scrollTo('contact')" label="Contato" variant="text"/>
     </div>
-    <div class="w-12 md:w-3 text-center md:text-right">
+    <div class="w-12 md:w-3 md:text-right my-2 sm:my-0">
       <app-links/>
     </div>
   </div>
 </header>
+
+<div [style]="{'height': header.clientHeight + 'px'}"
+     class="hidden md:block"></div>

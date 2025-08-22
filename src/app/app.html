@@ -1,12 +1,14 @@
-<app-header/>
+<div class="main">
+  <app-header/>
 
-<router-outlet/>
+  <router-outlet/>
 
-<footer>
-  <div class="text-center opacity-80 my-5">
-    <span>&copy; VMK Comex 2025 - Todos os direitos reservados.</span>
-  </div>
-</footer>
+  <footer>
+    <div class="text-center opacity-80 my-5">
+      <span>&copy; VMK Comex 2025 - Todos os direitos reservados.</span>
+    </div>
+  </footer>
+</div>
 
-<p-scroll-top [buttonProps]="{severity: 'secondary', raised: true, rounded: true}"
+<p-scroll-top [buttonProps]="{severity: 'secondary', raised: true}"
               [threshold]="1000"/>
