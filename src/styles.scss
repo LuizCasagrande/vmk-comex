@@ -13,15 +13,12 @@ html, body {
   font-style: normal;
 }
 
-body::before {
-  overflow-x: hidden;
-  position: fixed;
-  content: '';
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.background {
+  height: 100%;
+  width: 100%;
   z-index: -1;
+  position: fixed;
+  overflow-x: hidden;
 
   background-color: color-mix(in srgb, #18181b, transparent 33%);
   background-blend-mode: multiply;
