@@ -13,17 +13,23 @@ html, body {
   font-style: normal;
 }
 
-.main {
+body::before {
+  overflow-x: hidden;
+  position: fixed;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+
   background-color: color-mix(in srgb, #18181b, transparent 33%);
   background-blend-mode: multiply;
-
   background-image: url('../public/background.png');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-
-  overflow-x: hidden;
 }
 
 * {
