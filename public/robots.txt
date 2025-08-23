@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vmkcomex.com.br/sitemap.xml
