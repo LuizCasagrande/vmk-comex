@@ -59,7 +59,7 @@ export const DATA: Map<string, PageDto> = new Map([
     'ADVICE',
     {
       header: 'Assessoria Para Importação',
-      image: 'assessoria.png',
+      image: 'assessoria.jpg',
       body: `
         <span>Sua porta de entrada para o mercado internacional de Ferro e Aço.</span>
       `,
@@ -69,7 +69,7 @@ export const DATA: Map<string, PageDto> = new Map([
     'ABOUT',
     {
       header: 'Sobre Nós',
-      image: 'sobre.png',
+      image: 'sobre.jpg',
       body: `
         <strong>A VMK Comex é especializada na importação de produtos siderúrgicos e materias de construção civil.</strong>
         <span class="block my-3">Para nós, tão importante quanto o destino final é o caminho para chegar até lá.</span>
@@ -117,7 +117,7 @@ export const DATA: Map<string, PageDto> = new Map([
     'SOLUTIONS',
     {
       header: 'Soluções Completas',
-      image: 'solucoes.png',
+      image: 'solucoes.jpg',
       body: `
         <span>Nosso foco é oferecer serviço especializado para todas as etapas da importação e assegurar a otimização de seus processos e a redução de custos.</span>
       `,
@@ -143,7 +143,7 @@ export const DATA: Map<string, PageDto> = new Map([
     'BENEFITS',
     {
       header: 'Benefícios da Importação Direta',
-      image: 'beneficios.png',
+      image: 'beneficios.jpg',
       body: `
         <span>A importação da China oferece uma combinação imbatível de preços competitivos, variedade de produtos e logística eficiente.</span>
       `,
@@ -195,7 +195,7 @@ export const DATA: Map<string, PageDto> = new Map([
     'SERVICES',
     {
       header: 'Nossos Serviços',
-      image: 'servicos.png',
+      image: 'servicos.jpg',
       body: `
         <span>Nosso foco é simplificar e otimizar suas operações de comércio exterior, através de soluções completas e personalizadas.</span>
       `,
@@ -213,7 +213,7 @@ export const DATA: Map<string, PageDto> = new Map([
     'FEATURES',
     {
       header: 'Tudo o que sua empresa precisa',
-      image: 'aviao.png',
+      image: 'aviao.jpg',
       body: `
         <span>Para importar com segurança em um único lugar.</span>
       `,
@@ -265,7 +265,7 @@ export const DATA: Map<string, PageDto> = new Map([
     'SEGMENTS',
     {
       header: 'Principais Segmentos',
-      image: 'segmentos.png',
+      image: 'segmentos.jpg',
       body: `
         <span>Somos uma empresa <strong>especializada</strong> na importação de produtos siderúrgicos e materiais de construção civil,
         especialmente nas linhas de <strong>Ferro e Aço</strong>, <strong>Fixação</strong> e de <strong>Solda</strong> em geral.</span>
@@ -285,7 +285,7 @@ export const DATA: Map<string, PageDto> = new Map([
     'IRON',
     {
       header: 'Linha de Ferro e Aço',
-      image: 'ferro.png',
+      image: 'ferro.jpg',
       body: `
         <span>A China oferece <strong>+ de 100 siderúrgicas</strong> com vantagens e preços altamente competitivos,
         ampla variedade de produtos e logística eficiente tornando o país um parceiro estratégico.</span>
@@ -300,14 +300,14 @@ export const DATA: Map<string, PageDto> = new Map([
         'Tubos.',
         'Alumínio.',
       ],
-      listImage: 'ferro-tipos.png',
+      listImage: 'ferro-tipos.jpg',
     },
   ],
   [
     'FIXATION',
     {
       header: 'Linha de Fixação',
-      image: 'fixacao.png',
+      image: 'fixacao.jpg',
       body: `
         <span>Se você está buscando uma linha completa de fixadores para suas necessidades, a indústria chinesa tem muito a oferecer.</span>
       `,
@@ -322,14 +322,14 @@ export const DATA: Map<string, PageDto> = new Map([
         'Porcas Sextavadas.',
         'Arruelas Lisas.',
       ],
-      listImage: 'fixacao-tipos.png',
+      listImage: 'fixacao-tipos.jpg',
     },
   ],
   [
     'WELDING',
     {
       header: 'Linha de Solda em Geral',
-      image: 'solda.png',
+      image: 'solda.jpg',
       body: `
         <span>A China é um dos maiores fabricantes de equipamentos de solda do mundo, oferecendo uma vasta gama de produtos com excelente custo-benefício.</span>
       `,
@@ -342,14 +342,14 @@ export const DATA: Map<string, PageDto> = new Map([
         'Abrasivos (Discos de corte, flap, desbaste, diamantados, serra).',
         'Ferramentas.',
       ],
-      listImage: 'solda-tipos.png',
+      listImage: 'solda-tipos.jpg',
     },
   ],
   [
     'PROJECT',
     {
       header: 'Seu Projeto',
-      image: 'projeto.png',
+      image: 'projeto.jpg',
       body: `
         <span>Vamos juntos encontrar a viabilidade de importação para seu negócio?</span>
         <strong class="block mt-3">Aqui é onde tudo começa!</strong>
