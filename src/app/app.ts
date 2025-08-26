@@ -15,7 +15,7 @@ import {ScrollTop} from 'primeng/scrolltop';
 })
 export class App {
 
-  constructor(protected readonly primeNG: PrimeNG) {
+  constructor(private primeNG: PrimeNG) {
     this.primeNG.ripple.set(true);
   }
 }

@@ -1,369 +1,317 @@
-import {StepsDto} from './data/step-dto';
 import {PageDto} from './data/page-dto';
+import {StepsDto} from './data/step-dto';
 
-export const PROJECT_STEPS: StepsDto[] = [
-  {
-    steps: [
-      {
-        title: 'Diagnóstico',
-        description: 'Identificação das necessidades e definição de escopo.',
-        icon: 'pi-search',
-      },
-      {
-        title: 'Orçamento',
-        description: 'Conforme demanda, aplicamos um estudo de viabilidade.',
-        icon: 'pi-dollar',
-      },
-      {
-        title: 'Amostras',
-        description: 'Amostras iniciais de produtos e de embalagens.',
-        icon: 'pi-box',
-      },
-    ],
-    info: [
-      'Habilitação do radar Siscomex;',
-      'Busca dos melhores fornecedores, melhores preços e qualidade;',
-      'Simulação e estimativas de custos;',
-      'Preparação de auditoria e inspeções de qualidade.',
-    ],
-  },
-  {
-    steps: [
-      {
-        title: 'Pedido',
-        description: 'Negociação, compra e negociação do pagamento.',
-        icon: 'pi-shopping-cart',
-      },
-      {
-        title: 'Checagem',
-        description: 'Acompanhamento da produção e inspeções.',
-        icon: 'pi-eye',
-      },
-      {
-        title: 'Entrega',
-        description: 'Rastreio da carga e desembaraço aduaneiro.',
-        icon: 'pi-truck',
-      },
-    ],
-    info: [
-      'Contrato junto ao fornecedor para efetivação de pagamento e certificação das garantias de entrega;',
-      'Acompanhamento da produção em todas as etapas;',
-      'Inspeção de qualidade antes do embarque;',
-      'Rastreio e acompanhamento da carga e de todo desembaraço aduaneiro.',
-    ],
-  },
-];
+export const PAGE_1: PageDto = {
+  header: 'Assessoria Para Importação',
+  image: 'assessoria.jpg',
+  body: `
+    <span>Sua porta de entrada para o mercado internacional de Ferro e Aço.</span>
+  `,
+};
 
-export const DATA: Map<string, PageDto> = new Map([
-  [
-    'ADVICE',
-    {
-      header: 'Assessoria Para Importação',
-      image: 'assessoria.jpg',
-      body: `
-        <span>Sua porta de entrada para o mercado internacional de Ferro e Aço.</span>
-      `,
-    },
+export const PAGE_2: PageDto = {
+  header: 'Sobre Nós',
+  image: 'sobre.jpg',
+  body: `
+    <strong>A VMK Comex é especializada na importação de produtos siderúrgicos e materias de construção civil.</strong>
+    <span class="block my-3">Para nós, tão importante quanto o destino final é o caminho para chegar até lá.</span>
+    <span>Estamos sempre buscando orientar negócios por caminhos inteligentes.</span>
+  `,
+};
+
+export const PAGE_3: PageDto = {
+  header: 'Nossos Números',
+  image: '',
+  body: `
+    <span>Nossa experiência prática nos permite identificar oportunidades e oferecer soluções inovadoras para
+    impulsionar o crescimento do seu negócio.</span>
+  `,
+  cards: [{
+    icon: 'pi pi-plus',
+    body: `
+      <strong>15 milhões</strong> em transações.
+    `,
+  }, {
+    icon: 'pi pi-plus',
+    body: `
+      <strong>1000 tons</strong> em entregas.
+    `,
+  }, {
+    icon: 'pi pi-plus',
+    body: `
+      <strong>7 Anos</strong> de mercado.
+    `,
+  }, {
+    icon: 'pi pi-plus',
+    body: `
+      <strong>80</strong> Operações Portuárias.
+    `,
+  }],
+};
+
+export const PAGE_4: PageDto = {
+  header: 'Soluções Completas',
+  image: 'solucoes.jpg',
+  body: `
+    <span>Nosso foco é oferecer serviço especializado para todas as etapas da importação e assegurar a otimização de
+    seus processos e a redução de custos.</span>
+  `,
+  cards: [{
+    header: 'Expertise',
+    icon: 'pi pi-verified',
+    body: `
+      <span>Antecipar desafios e oferecer soluções ágeis e personalizadas.</span>
+    `,
+  }, {
+    header: 'Colaboração',
+    icon: 'pi pi-sparkles',
+    body: `
+      <span>Relacionamentos sólidos através da colaboração e da confiança mútua.</span>
+    `,
+  }],
+};
+
+export const PAGE_5: PageDto = {
+  header: 'Benefícios da Importação Direta',
+  image: 'beneficios.jpg',
+  body: `
+    <span>A importação da China oferece uma combinação imbatível de preços competitivos, variedade de produtos e
+    logística eficiente.</span>
+  `,
+  cards: [{
+    icon: 'pi-chart-line',
+    body: `
+      <span>Oportunidade e prosperidade para seu negócio.</span>
+    `,
+  }],
+  topics: [{
+    title: 'Maior controle',
+    description: 'A empresa tem controle sobre a cadeia de suprimentos, desde o desenvolvimento do produto até o transporte.',
+  }, {
+    title: 'Maior flexibilidade',
+    description: 'A empresa pode negociar diretamente com os fornecedores, escolhendo os parceiros mais adequados.',
+  }, {
+    title: 'Melhores condições comerciais',
+    description: 'A empresa pode conseguir melhores preços, prazos e formas de pagamento.',
+  }, {
+    title: 'Acesso a produtos e tecnologias',
+    description: 'A empresa pode ter acesso a produtos e tecnologias que não existem no mercado interno.',
+  }, {
+    title: 'Redução de custos',
+    description: 'A empresa pode conseguir preços mais atrativos e menor variação do preço da matéria-prima.',
+  }, {
+    title: 'Maior previsibilidade',
+    description: 'A empresa pode adaptar o processo de importação de acordo com a sazonalidade.',
+  }, {
+    title: 'Maior segurança',
+    description: 'A empresa pode ter maior segurança e previsibilidade.',
+  }, {
+    title: 'Histórico com o exportador',
+    description: 'A empresa cria um histórico de compra com o exportador.',
+  }],
+};
+
+export const PAGE_6: PageDto = {
+  header: 'Nossos Serviços',
+  image: 'servicos.jpg',
+  body: `
+    <span>Nosso foco é simplificar e otimizar suas operações de comércio exterior, através de soluções completas e
+    personalizadas.</span>
+  `,
+  cards: [{
+    icon: 'pi pi-lightbulb',
+    body: `
+      <span>Um novo conceito em comex.</span>
+    `,
+  }],
+};
+
+export const PAGE_7: PageDto = {
+  header: 'Tudo o que sua empresa precisa',
+  image: 'aviao.jpg',
+  body: `
+    <span>Para importar com segurança em um único lugar.</span>
+  `,
+  topics: [{
+    title: '1',
+    description: 'Homologação de Fornecedores.',
+  }, {
+    title: '2',
+    description: 'Estudo de Viabilidade.',
+  }, {
+    title: '3',
+    description: 'Inspeção da Carga.',
+  }, {
+    title: '4',
+    description: 'Planejamento Tributário.',
+  }, {
+    title: '5',
+    description: 'Logística Internacional.',
+  }, {
+    title: '6',
+    description: 'Desembaraço Aduaneiro.',
+  }, {
+    title: '7',
+    description: 'Linhas de Financiamento.',
+  }, {
+    title: '8',
+    description: 'Armazenamento da Carga.',
+  }, {
+    title: '9',
+    description: 'Tradutor e Interprete.',
+  }, {
+    title: '10',
+    description: 'Acompanhamento a Fábricas e Feiras.',
+  }]
+};
+
+export const PAGE_8: PageDto = {
+  header: 'Principais Segmentos',
+  image: 'segmentos.jpg',
+  body: `
+    <span>Somos uma empresa <strong>especializada</strong> na importação de produtos siderúrgicos e materiais de
+    construção civil, especialmente nas linhas de <strong>Ferro e Aço</strong>, <strong>Fixação</strong> e de
+    <strong>Solda</strong> em geral.</span>
+  `,
+  cards: [{
+    header: 'Negócios Internacionais',
+    icon: 'pi pi-globe',
+    body: `
+      <span>Antecipar desafios e oferecer soluções ágeis e personalizadas.</span>
+    `,
+  }],
+};
+
+export const PAGE_9: PageDto = {
+  header: 'Linha de Ferro e Aço',
+  image: 'ferro.jpg',
+  body: `
+    <span>A China oferece <strong>+ de 100 siderúrgicas</strong> com vantagens e preços altamente competitivos, ampla
+    variedade de produtos e logística eficiente tornando o país um parceiro estratégico.</span>
+  `,
+  listItems: [
+    'Bobinas de Aço Carbono.',
+    'Bobinas de Aço Galvanizado.',
+    'Bobinas de Aço Galvalume.',
+    'Bobinas de Aço Chapa Xadrez.',
+    'Bobinas Laminado a quente.',
+    'Bobinas Laminado a frio.',
+    'Tubos.',
+    'Alumínio.',
   ],
-  [
-    'ABOUT',
-    {
-      header: 'Sobre Nós',
-      image: 'sobre.jpg',
-      body: `
-        <strong>A VMK Comex é especializada na importação de produtos siderúrgicos e materias de construção civil.</strong>
-        <span class="block my-3">Para nós, tão importante quanto o destino final é o caminho para chegar até lá.</span>
-        <span>Estamos sempre buscando orientar negócios por caminhos inteligentes.</span>
-      `,
-    },
+  listImage: 'ferro-tipos.jpg',
+};
+
+export const PAGE_10: PageDto = {
+  header: 'Linha de Fixação',
+  image: 'fixacao.jpg',
+  body: `
+    <span>Se você está buscando uma linha completa de fixadores para suas necessidades, a indústria chinesa tem muito
+    a oferecer.</span>
+  `,
+  listItems: [
+    'Parafusos Sextavados.',
+    'Parafusos Allen (Sextavado interno).',
+    'Parafusos de Rosca Máquina.',
+    'Parafusos Auto Atarraxantes.',
+    'Parafusos Chipboard.',
+    'Parafusos Auto Brocantes.',
+    'Chumbador.',
+    'Porcas Sextavadas.',
+    'Arruelas Lisas.',
   ],
-  [
-    'NUMBERS',
-    {
-      header: 'Nossos Números',
-      image: '',
-      body: `
-        <span>Nossa experiência prática nos permite identificar oportunidades e oferecer soluções inovadoras para impulsionar o crescimento do seu negócio.</span>
-      `,
-      cards: [
-        {
-          icon: 'pi pi-plus',
-          body: `
-            <strong>15 milhões</strong> em transações.
-          `,
-        },
-        {
-          icon: 'pi pi-plus',
-          body: `
-            <strong>1000 tons</strong> em entregas.
-          `,
-        },
-        {
-          icon: 'pi pi-plus',
-          body: `
-            <strong>7 Anos</strong> de mercado.
-          `,
-        },
-        {
-          icon: 'pi pi-plus',
-          body: `
-            <strong>80</strong> Operações Portuárias.
-          `,
-        },
-      ],
-    },
+  listImage: 'fixacao-tipos.jpg',
+};
+
+export const PAGE_11: PageDto = {
+  header: 'Linha de Solda em Geral',
+  image: 'solda.jpg',
+  body: `
+    <span>A China é um dos maiores fabricantes de equipamentos de solda do mundo, oferecendo uma vasta gama de produtos
+    com excelente custo-benefício.</span>
+  `,
+  listItems: [
+    'Eletrodo revestido.',
+    'TIG.',
+    'MIG / MAG.',
+    'Arame tubular.',
+    'Oxigás.',
+    'Abrasivos (Discos de corte, flap, desbaste, diamantados, serra).',
+    'Ferramentas.',
   ],
-  [
-    'SOLUTIONS',
-    {
-      header: 'Soluções Completas',
-      image: 'solucoes.jpg',
-      body: `
-        <span>Nosso foco é oferecer serviço especializado para todas as etapas da importação e assegurar a otimização de seus processos e a redução de custos.</span>
-      `,
-      cards: [
-        {
-          header: 'Expertise',
-          icon: 'pi pi-verified',
-          body: `
-            <span>Antecipar desafios e oferecer soluções ágeis e personalizadas.</span>
-          `,
-        },
-        {
-          header: 'Colaboração',
-          icon: 'pi pi-sparkles',
-          body: `
-            <span>Relacionamentos sólidos através da colaboração e da confiança mútua.</span>
-          `,
-        },
-      ],
-    },
+  listImage: 'solda-tipos.jpg',
+};
+
+export const PAGE_12: PageDto = {
+  header: 'Etapas do Projeto',
+  image: 'projeto-etapas.jpg',
+  body: `
+    <span>Gerenciamento completo de processos, de ponta a ponta.</span>
+  `,
+};
+
+export const PAGE_13: PageDto = {
+  header: 'Seu Projeto',
+  image: 'projeto.jpg',
+  body: `
+    <span>Vamos juntos encontrar a viabilidade de importação para seu negócio?</span>
+    <strong class="block mt-3">Aqui é onde tudo começa!</strong>
+  `,
+  cards: [{
+    icon: 'pi-trophy',
+    body: 'Transforme desafios em oportunidades.',
+  }, {
+    icon: 'pi-key',
+    body: 'Abra a porta para o mercado internacional.',
+  }],
+};
+
+export const PAGE_14: PageDto = {
+  header: 'Obrigado!',
+  image: 'contato.jpg',
+  body: `
+    <span>Fale conosco.</span>
+  `,
+};
+
+export const STEPS: StepsDto[] = [{
+  steps: [{
+    title: 'Diagnóstico',
+    description: 'Identificação das necessidades e definição de escopo.',
+    icon: 'pi-search',
+  }, {
+    title: 'Orçamento',
+    description: 'Conforme demanda, aplicamos um estudo de viabilidade.',
+    icon: 'pi-dollar',
+  }, {
+    title: 'Amostras',
+    description: 'Amostras iniciais de produtos e de embalagens.',
+    icon: 'pi-box',
+  }],
+  info: [
+    'Habilitação do radar Siscomex;',
+    'Busca dos melhores fornecedores, melhores preços e qualidade;',
+    'Simulação e estimativas de custos;',
+    'Preparação de auditoria e inspeções de qualidade.',
   ],
-  [
-    'BENEFITS',
-    {
-      header: 'Benefícios da Importação Direta',
-      image: 'beneficios.jpg',
-      body: `
-        <span>A importação da China oferece uma combinação imbatível de preços competitivos, variedade de produtos e logística eficiente.</span>
-      `,
-      cards: [
-        {
-          icon: 'pi-chart-line',
-          body: `
-            <span>Oportunidade e prosperidade para seu negócio.</span>
-          `,
-        }
-      ],
-      topics: [
-        {
-          title: 'Maior controle',
-          description: 'A empresa tem controle sobre a cadeia de suprimentos, desde o desenvolvimento do produto até o transporte.',
-        },
-        {
-          title: 'Maior flexibilidade',
-          description: 'A empresa pode negociar diretamente com os fornecedores, escolhendo os parceiros mais adequados.',
-        },
-        {
-          title: 'Melhores condições comerciais',
-          description: 'A empresa pode conseguir melhores preços, prazos e formas de pagamento.',
-        },
-        {
-          title: 'Acesso a produtos e tecnologias',
-          description: 'A empresa pode ter acesso a produtos e tecnologias que não existem no mercado interno.',
-        },
-        {
-          title: 'Redução de custos',
-          description: 'A empresa pode conseguir preços mais atrativos e menor variação do preço da matéria-prima.',
-        },
-        {
-          title: 'Maior previsibilidade',
-          description: 'A empresa pode adaptar o processo de importação de acordo com a sazonalidade.',
-        },
-        {
-          title: 'Maior segurança',
-          description: 'A empresa pode ter maior segurança e previsibilidade.',
-        },
-        {
-          title: 'Histórico com o exportador',
-          description: 'A empresa cria um histórico de compra com o exportador.',
-        },
-      ],
-    },
+}, {
+  steps: [{
+    title: 'Pedido',
+    description: 'Negociação, compra e negociação do pagamento.',
+    icon: 'pi-shopping-cart',
+  }, {
+    title: 'Checagem',
+    description: 'Acompanhamento da produção e inspeções.',
+    icon: 'pi-eye',
+  }, {
+    title: 'Entrega',
+    description: 'Rastreio da carga e desembaraço aduaneiro.',
+    icon: 'pi-truck',
+  }],
+  info: [
+    'Contrato junto ao fornecedor para efetivação de pagamento e certificação das garantias de entrega;',
+    'Acompanhamento da produção em todas as etapas;',
+    'Inspeção de qualidade antes do embarque;',
+    'Rastreio e acompanhamento da carga e de todo desembaraço aduaneiro.',
   ],
-  [
-    'SERVICES',
-    {
-      header: 'Nossos Serviços',
-      image: 'servicos.jpg',
-      body: `
-        <span>Nosso foco é simplificar e otimizar suas operações de comércio exterior, através de soluções completas e personalizadas.</span>
-      `,
-      cards: [
-        {
-          icon: 'pi pi-lightbulb',
-          body: `
-            <span>Um novo conceito em comex.</span>
-          `,
-        },
-      ],
-    },
-  ],
-  [
-    'FEATURES',
-    {
-      header: 'Tudo o que sua empresa precisa',
-      image: 'aviao.jpg',
-      body: `
-        <span>Para importar com segurança em um único lugar.</span>
-      `,
-      topics: [
-        {
-          title: '1',
-          description: 'Homologação de Fornecedores.',
-        },
-        {
-          title: '2',
-          description: 'Estudo de Viabilidade.',
-        },
-        {
-          title: '3',
-          description: 'Inspeção da Carga.',
-        },
-        {
-          title: '4',
-          description: 'Planejamento Tributário.',
-        },
-        {
-          title: '5',
-          description: 'Logística Internacional.',
-        },
-        {
-          title: '6',
-          description: 'Desembaraço Aduaneiro.',
-        },
-        {
-          title: '7',
-          description: 'Linhas de Financiamento.',
-        },
-        {
-          title: '8',
-          description: 'Armazenamento da Carga.',
-        },
-        {
-          title: '9',
-          description: 'Tradutor e Interprete.',
-        },
-        {
-          title: '10',
-          description: 'Acompanhamento a Fábricas e Feiras.',
-        },
-      ]
-    },
-  ],
-  [
-    'SEGMENTS',
-    {
-      header: 'Principais Segmentos',
-      image: 'segmentos.jpg',
-      body: `
-        <span>Somos uma empresa <strong>especializada</strong> na importação de produtos siderúrgicos e materiais de construção civil,
-        especialmente nas linhas de <strong>Ferro e Aço</strong>, <strong>Fixação</strong> e de <strong>Solda</strong> em geral.</span>
-      `,
-      cards: [
-        {
-          header: 'Negócios Internacionais',
-          icon: 'pi pi-globe',
-          body: `
-            <span>Antecipar desafios e oferecer soluções ágeis e personalizadas.</span>
-          `,
-        },
-      ],
-    },
-  ],
-  [
-    'IRON',
-    {
-      header: 'Linha de Ferro e Aço',
-      image: 'ferro.jpg',
-      body: `
-        <span>A China oferece <strong>+ de 100 siderúrgicas</strong> com vantagens e preços altamente competitivos,
-        ampla variedade de produtos e logística eficiente tornando o país um parceiro estratégico.</span>
-      `,
-      listItems: [
-        'Bobinas de Aço Carbono.',
-        'Bobinas de Aço Galvanizado.',
-        'Bobinas de Aço Galvalume.',
-        'Bobinas de Aço Chapa Xadrez.',
-        'Bobinas Laminado a quente.',
-        'Bobinas Laminado a frio.',
-        'Tubos.',
-        'Alumínio.',
-      ],
-      listImage: 'ferro-tipos.jpg',
-    },
-  ],
-  [
-    'FIXATION',
-    {
-      header: 'Linha de Fixação',
-      image: 'fixacao.jpg',
-      body: `
-        <span>Se você está buscando uma linha completa de fixadores para suas necessidades, a indústria chinesa tem muito a oferecer.</span>
-      `,
-      listItems: [
-        'Parafusos Sextavados.',
-        'Parafusos Allen (Sextavado interno).',
-        'Parafusos de Rosca Máquina.',
-        'Parafusos Auto Atarraxantes.',
-        'Parafusos Chipboard.',
-        'Parafusos Auto Brocantes.',
-        'Chumbador.',
-        'Porcas Sextavadas.',
-        'Arruelas Lisas.',
-      ],
-      listImage: 'fixacao-tipos.jpg',
-    },
-  ],
-  [
-    'WELDING',
-    {
-      header: 'Linha de Solda em Geral',
-      image: 'solda.jpg',
-      body: `
-        <span>A China é um dos maiores fabricantes de equipamentos de solda do mundo, oferecendo uma vasta gama de produtos com excelente custo-benefício.</span>
-      `,
-      listItems: [
-        'Eletrodo revestido.',
-        'TIG.',
-        'MIG / MAG.',
-        'Arame tubular.',
-        'Oxigás.',
-        'Abrasivos (Discos de corte, flap, desbaste, diamantados, serra).',
-        'Ferramentas.',
-      ],
-      listImage: 'solda-tipos.jpg',
-    },
-  ],
-  [
-    'PROJECT',
-    {
-      header: 'Seu Projeto',
-      image: 'projeto.jpg',
-      body: `
-        <span>Vamos juntos encontrar a viabilidade de importação para seu negócio?</span>
-        <strong class="block mt-3">Aqui é onde tudo começa!</strong>
-      `,
-      cards: [
-        {
-          icon: 'pi-trophy',
-          body: 'Transforme desafios em oportunidades.',
-        },
-        {
-          icon: 'pi-key',
-          body: 'Abra a porta para o mercado internacional.',
-        },
-      ],
-    },
-  ],
-]);
+}];

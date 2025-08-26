@@ -17,7 +17,7 @@ export class Header {
 
   protected readonly DRIVE = environment.drive;
 
-  protected scrollTo(id: string): void {
+  scrollTo(id: string): void {
     document.getElementById(id)!.scrollIntoView({behavior: 'smooth', block: 'start'});
   }
 }

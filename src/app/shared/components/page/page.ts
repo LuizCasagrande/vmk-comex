@@ -25,5 +25,6 @@ export class Page {
 })
 export class PageTemplate {
 
-  @Input() template!: string;
+  @Input()
+  template!: string;
 }
