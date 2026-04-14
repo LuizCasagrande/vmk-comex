@@ -13,9 +13,9 @@ export const PAGE_2: PageDto = {
   header: 'Sobre Nós',
   image: 'sobre.jpg',
   body: `
-    <strong>A VMK Comex é especializada na importação de produtos siderúrgicos e materias de construção civil.</strong>
-    <span class="block my-3">Para nós, tão importante quanto o destino final é o caminho para chegar até lá.</span>
-    <span>Estamos sempre buscando orientar negócios por caminhos inteligentes.</span>
+    <strong>A VMK Comex é especializada na importação de produtos siderúrgicos e materiais para a construção civil.</strong>
+    <span class="block my-3">Mais do que entregar o produto final, cuidamos de todo o processo, da origem ao destino, com estratégia, controle e eficiência.</span>
+    <span>Acreditamos que o sucesso de uma importação está no caminho, e por isso orientamos nossos clientes com soluções inteligentes que aumentam a competitividade e os resultados do negócio, tornando empresas mais lucrativas.</span>
   `,
 };
 
