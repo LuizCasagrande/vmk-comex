@@ -15,6 +15,8 @@ import {ScrollTop} from 'primeng/scrolltop';
 })
 export class App {
 
+  protected readonly CURRENT_YEAR = new Date().getFullYear();
+
   constructor(private primeNG: PrimeNG) {
     this.primeNG.ripple.set(true);
   }
