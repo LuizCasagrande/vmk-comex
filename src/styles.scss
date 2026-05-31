@@ -13,6 +13,10 @@ html, body {
   font-style: normal;
 }
 
+body {
+  background-color: black;
+}
+
 * {
   outline: none !important;
 }
@@ -171,7 +175,6 @@ p-timeline .p-timeline-event-content {
   position: fixed;
   top: 0;
   right: 0;
-  bottom: 0;
   left: 0;
   z-index: -1;
 
@@ -181,5 +184,7 @@ p-timeline .p-timeline-event-content {
   background-position: center;
   background-size: cover;
   background-image: url('../public/bg-mobile.jpg');
-  height: 100svh;
+
+  height: 110lvh;
+  transform: translate3d(0, 0, 0);
 }
