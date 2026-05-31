@@ -36,7 +36,7 @@ html, body {
   --p-timeline-event-connector-color: var(--p-primary-400);
 }
 
-app-links {
+app-page app-links {
   --p-button-link-color: var(--p-primary-contrast-color);
   --p-button-link-hover-color: var(--p-primary-contrast-color);
   --p-button-link-active-color: var(--p-primary-contrast-color);
