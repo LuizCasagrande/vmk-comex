@@ -17,6 +17,31 @@ html, body {
   outline: none !important;
 }
 
+.main {
+  color: var(--p-primary-contrast-color);
+
+  --p-accordion-header-color: var(--p-text-color);
+  --p-accordion-header-hover-color: var(--p-primary-color);
+  --p-accordion-header-active-color: var(--p-primary-color);
+  --p-accordion-header-active-hover-color: var(--p-primary-color);
+  --p-accordion-content-color: var(--p-primary-color);
+
+  --p-tabs-tab-color: var(--p-text-color);
+  --p-tabs-tab-hover-color: var(--p-primary-color);
+  --p-tabs-tabpanel-color: var(--p-primary-color);
+
+  --p-fieldset-color: var(--p-primary-color);
+  --p-fieldset-border-color: var(--p-primary-400);
+
+  --p-timeline-event-connector-color: var(--p-primary-400);
+}
+
+app-links {
+  --p-button-link-color: var(--p-primary-contrast-color);
+  --p-button-link-hover-color: var(--p-primary-contrast-color);
+  --p-button-link-active-color: var(--p-primary-contrast-color);
+}
+
 strong {
   text-decoration: underline;
 }
