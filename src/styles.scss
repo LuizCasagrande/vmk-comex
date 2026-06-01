@@ -11,6 +11,9 @@ html, body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+
+  --p-primary-contrast-color: var(--p-primary-100);
+  --p-content-background: var(--p-primary-100) !important;
 }
 
 body {
@@ -178,7 +181,7 @@ p-timeline .p-timeline-event-content {
   left: 0;
   z-index: -1;
 
-  background-color: color-mix(in srgb, #18181b, transparent 33%);
+  background-color: color-mix(in srgb, black, transparent 50%);
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-position: center;
