@@ -1,6 +1,6 @@
 @if (visibleMessage) {
-  <div class="flex justify-content-center w-full message md:fixed md:top-0 md:mt-1">
-    <p-message closable styleClass="h-4rem md:h-2rem cursor-pointer md:border-round">
+  <div class="message flex justify-content-center w-full md:fixed md:top-0 md:mt-1">
+    <p-message closable styleClass="h-4rem md:h-2rem md:border-round cursor-pointer">
       <ng-template #icon>
         <i class="pi pi-gift hidden sm:inline"></i>
       </ng-template>
@@ -14,7 +14,7 @@
 @if (blocked) {
   <p-blockUI [blocked]="blocked">
     <div class="flex align-items-center justify-content-center h-full w-full fixed">
-      <div class="h-3rem flex flex-column align-items-center">
+      <div class="flex flex-column align-items-center h-3rem">
         <i class="text-5xl pi {{loading ? 'pi-spinner pi-spin' : 'pi-check-circle'}}"></i>
         @if (!loading) {
           <span class="text-xl bg-black-alpha-60 mt-2">Obrigado! Entraremos em contato.</span>
@@ -30,7 +30,7 @@
           styleClass="w-10 sm:w-8 md:w-6 lg:w-4 xl:w-2">
   <div class="text-center">
     <img alt="VMK Comex"
-         class="border-circle my-3 border-2 border-primary-400"
+         class="border-circle border-2 border-primary-400 my-3"
          height="100"
          ngSrc="logo.png"
          width="100"/>

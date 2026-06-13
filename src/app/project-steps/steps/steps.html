@@ -3,7 +3,7 @@
     <p-badge [value]="data.steps.indexOf(step) + countStart"/>
   </ng-template>
   <ng-template let-step pTemplate="content">
-    <div class="border-round-xl border-2 border-dashed border-primary-500 text-center p-4">
+    <div class="text-center border-round-xl border-2 border-dashed border-primary-500 p-4">
       <i class="pi {{step.icon}} text-xl"></i>
       <h2>{{ step.title }}</h2>
       <p>{{ step.description }}</p>
