@@ -1,0 +1,103 @@
+@if (visibleMessage) {
+  <div class="flex justify-content-center w-full message md:fixed md:top-0 md:mt-1">
+    <p-message closable styleClass="h-4rem md:h-2rem cursor-pointer md:border-round">
+      <ng-template #icon>
+        <i class="pi pi-gift hidden sm:inline"></i>
+      </ng-template>
+      <div (click)="visibleForm = true">
+        <span>Cadastre sua empresa agora e receba uma consultoria <strong>GRATUITA</strong> com um dos nossos especialistas.</span>
+      </div>
+    </p-message>
+  </div>
+}
+
+@if (blocked) {
+  <p-blockUI [blocked]="blocked">
+    <div class="flex align-items-center justify-content-center h-full w-full fixed">
+      <div class="h-3rem flex flex-column align-items-center">
+        <i class="text-5xl pi {{loading ? 'pi-spinner pi-spin' : 'pi-check-circle'}}"></i>
+        @if (!loading) {
+          <span class="text-xl bg-black-alpha-60 mt-2">Obrigado! Entraremos em contato.</span>
+        }
+      </div>
+    </div>
+  </p-blockUI>
+}
+
+<p-dialog [(visible)]="visibleForm"
+          [closable]="false"
+          [draggable]="false"
+          styleClass="w-10 sm:w-8 md:w-6 lg:w-4 xl:w-2">
+  <div class="text-center">
+    <img alt="VMK Comex"
+         class="border-circle my-3 border-2 border-primary-400"
+         height="100"
+         ngSrc="logo.png"
+         width="100"/>
+  </div>
+
+  <form (ngSubmit)="submit()" [formGroup]="form">
+    <div class="flex flex-column gap-2 h-16rem sm:h-auto overflow-y-auto sm:overflow-y-hidden">
+      <app-field [id]="company.id" label="Empresa">
+        <input #company
+               autocomplete="company"
+               formControlName="company"
+               id="company"
+               maxlength="50"
+               pInputText/>
+      </app-field>
+      <app-field [id]="agent.id" label="Responsável">
+        <input #agent
+               autocomplete="agent"
+               formControlName="agent"
+               id="agent"
+               maxlength="50"
+               pInputText/>
+      </app-field>
+      <app-field [id]="instagram.id" label="Instagram">
+        <input #instagram
+               autocomplete="instagram"
+               formControlName="instagram"
+               id="instagram"
+               maxlength="50"
+               pInputText/>
+      </app-field>
+      <app-field [id]="whatsapp.id" label="WhatsApp">
+        <input #whatsapp
+               autocomplete="whatsapp"
+               formControlName="whatsapp"
+               id="whatsapp"
+               maxlength="11"
+               pInputText/>
+      </app-field>
+      <app-field [id]="email.id" label="Email">
+        <input #email
+               autocomplete="email"
+               formControlName="email"
+               id="email"
+               maxlength="100"
+               pInputText/>
+      </app-field>
+      <app-field [id]="message.id" [required]="false" label="Mensagem">
+        <textarea #message
+                  autocomplete="message"
+                  formControlName="message"
+                  id="message"
+                  maxlength="250"
+                  pTextarea
+                  rows="3"></textarea>
+      </app-field>
+    </div>
+
+    <div class="flex flex-column gap-2 mt-3">
+      <p-button label="Cadastrar"
+                severity="info"
+                styleClass="w-full"
+                type="submit"/>
+      <p-button (onClick)="reset()"
+                label="Cancelar"
+                styleClass="w-full"
+                variant="text"/>
+    </div>
+  </form>
+</p-dialog>

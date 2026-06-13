@@ -1,0 +1,19 @@
+.message {
+  --p-message-border-radius: 0;
+  --p-message-info-background: var(--p-blue-400);
+  --p-message-info-color: var(--p-primary-color);
+  z-index: 6;
+}
+
+p-dialog {
+  --p-dialog-header-padding: .75rem;
+
+  textarea, textarea:hover, textarea:focus {
+    resize: none;
+  }
+}
+
+p-blockUI {
+  --p-mask-color: var(--p-primary-50);
+  border-radius: 0;
+}

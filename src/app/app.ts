@@ -1,8 +1,9 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {PrimeNG} from 'primeng/config';
 import {Header} from './header/header';
-import {RouterOutlet} from '@angular/router';
+import {ActivatedRoute, RouterOutlet} from '@angular/router';
 import {ScrollTop} from 'primeng/scrolltop';
+import {Consultancy} from './consultancy/consultancy';
 
 @Component({
   selector: 'app-root',
@@ -10,14 +11,22 @@ import {ScrollTop} from 'primeng/scrolltop';
     Header,
     RouterOutlet,
     ScrollTop,
+    Consultancy,
   ],
   templateUrl: './app.html',
 })
-export class App {
+export class App implements OnInit {
 
   protected readonly CURRENT_YEAR = new Date().getFullYear();
+  protected experimentalFeatures = false;
 
-  constructor(private primeNG: PrimeNG) {
+  constructor(private primeNG: PrimeNG,
+              private activatedRoute: ActivatedRoute) {
     this.primeNG.ripple.set(true);
+  }
+
+  ngOnInit(): void {
+    this.activatedRoute.queryParamMap
+      .subscribe(params => this.experimentalFeatures = params.has('experimentalFeatures'));
   }
 }

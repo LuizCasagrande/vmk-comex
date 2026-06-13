@@ -1,0 +1,9 @@
+<div class="flex flex-column gap-1">
+  <label [for]="id">
+    <span>{{ label }}</span>
+    @if (required) {
+      <span> *</span>
+    }
+  </label>
+  <ng-content/>
+</div>

@@ -18,18 +18,23 @@ export const MyPreset = definePreset(Aura, {
     },
     colorScheme: {
       light: {
+        surface: {
+          0: '{stone.50}',
+          50: '{stone.50}',
+          100: '{stone.100}',
+          200: '{stone.400}',
+          300: '{stone.400}',
+          400: '{stone.400}',
+          500: '{stone.950}',
+          600: '{stone.950}',
+          700: '{stone.950}',
+          800: '{stone.950}',
+          900: '{stone.950}',
+          950: '{stone.950}'
+        },
         primary: {
           color: '{stone.950}',
-          inverseColor: '{stone.50}',
-          hoverColor: '{stone.900}',
-          activeColor: '{stone.800}'
         },
-        highlight: {
-          background: '{stone.950}',
-          focusBackground: '{stone.700}',
-          color: '{stone.50}',
-          focusColor: '{stone.50}'
-        }
       },
     }
   }

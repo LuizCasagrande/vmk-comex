@@ -11,9 +11,6 @@ html, body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-
-  --p-primary-contrast-color: var(--p-primary-100);
-  --p-content-background: var(--p-primary-100) !important;
 }
 
 body {
@@ -25,28 +22,10 @@ body {
 }
 
 .main {
-  color: var(--p-primary-contrast-color);
-
-  --p-accordion-header-color: var(--p-text-color);
-  --p-accordion-header-hover-color: var(--p-primary-color);
-  --p-accordion-header-active-color: var(--p-primary-color);
-  --p-accordion-header-active-hover-color: var(--p-primary-color);
-  --p-accordion-content-color: var(--p-primary-color);
-
-  --p-tabs-tab-color: var(--p-text-color);
-  --p-tabs-tab-hover-color: var(--p-primary-color);
-  --p-tabs-tabpanel-color: var(--p-primary-color);
-
-  --p-fieldset-color: var(--p-primary-color);
-  --p-fieldset-border-color: var(--p-primary-400);
-
-  --p-timeline-event-connector-color: var(--p-primary-400);
-}
-
-app-page app-links {
-  --p-button-link-color: var(--p-primary-contrast-color);
-  --p-button-link-hover-color: var(--p-primary-contrast-color);
-  --p-button-link-active-color: var(--p-primary-contrast-color);
+  color: var(--p-primary-50);
+  --p-button-link-color: var(--p-primary-50);
+  --p-button-link-hover-color: var(--p-primary-50);
+  --p-button-link-active-color: var(--p-primary-50);
 }
 
 strong {
