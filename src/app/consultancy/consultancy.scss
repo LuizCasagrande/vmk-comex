@@ -17,3 +17,9 @@ p-blockUI {
   --p-mask-color: var(--p-primary-50);
   border-radius: 0;
 }
+
+@media screen and (max-height: 768px) {
+  .max-height-for-low-res {
+    max-height: 45vh !important;
+  }
+}

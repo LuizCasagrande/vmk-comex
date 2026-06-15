@@ -27,7 +27,7 @@
 <p-dialog [(visible)]="visibleForm"
           [closable]="false"
           [draggable]="false"
-          styleClass="w-10 sm:w-8 md:w-6 lg:w-4 xl:w-2">
+          styleClass="w-10 sm:w-8 md:w-6 lg:w-4 xl:w-3 xxl:w-2">
   <div class="text-center">
     <img alt="VMK Comex"
          class="border-circle border-2 border-primary-400 my-3"
@@ -37,7 +37,7 @@
   </div>
 
   <form (ngSubmit)="submit()" [formGroup]="form">
-    <div class="flex flex-column gap-2 h-16rem sm:h-auto overflow-y-auto sm:overflow-y-hidden">
+    <div class="flex flex-column gap-2 h-16rem sm:h-auto overflow-y-auto max-height-for-low-res">
       <app-field [id]="company.id" label="Empresa">
         <input #company
                autocomplete="company"

@@ -126,6 +126,12 @@ p-timeline .p-timeline-event-content {
   }
 }
 
+@media screen and (min-width: 1700px) {
+  .xxl\:w-2 {
+    width: 16.6667% !important;
+  }
+}
+
 @media screen and (min-width: 768px) {
   div[pagetemplate='main'] {
     margin-bottom: 0;
