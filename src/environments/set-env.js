@@ -6,6 +6,9 @@ const file = `export const environment = {
   email: '${process.env.EMAIL}',
   address: '${process.env.ADDRESS}',
   drive: '${process.env.DRIVE}',
+  emailJsPublicKey: '${process.env.EMAIL_JS_PUBLIC_KEY}',
+  emailJsServiceId: '${process.env.EMAIL_JS_SERVICE_ID}',
+  emailJsTemplateId: '${process.env.EMAIL_JS_TEMPLATE_ID}',
 };
 `;
 

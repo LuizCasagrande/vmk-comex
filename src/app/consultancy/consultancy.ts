@@ -8,6 +8,7 @@ import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} fr
 import {Textarea} from 'primeng/textarea';
 import {Field} from './field/field';
 import {BlockUI} from 'primeng/blockui';
+import {EmailService} from './email/email.service';
 
 @Component({
   selector: 'app-consultancy',
@@ -34,7 +35,7 @@ export class Consultancy {
   protected blocked = false;
   protected loading = false;
 
-  constructor() {
+  constructor(private emailService: EmailService) {
     this.form = new FormGroup({
       company: new FormControl('', [Validators.required, Validators.minLength(2)]),
       agent: new FormControl('', [Validators.required, Validators.minLength(3)]),
@@ -49,14 +50,14 @@ export class Consultancy {
     if (this.form.valid) {
       this.loading = true;
       this.blocked = true;
-      setTimeout(() => {
-        this.loading = false;
-        setTimeout(() => {
+      this.emailService.sendEmail(this.form.value)
+        .then(() => {
           this.reset();
           this.visibleMessage = false;
-          this.blocked = false;
-        }, 2000);
-      }, 3000);
+          this.loading = false;
+          setTimeout(() => this.blocked = false, 2000);
+        })
+        .catch(e => console.error(e));
     } else {
       this.form.markAllAsTouched();
       this.form.markAllAsDirty();
