@@ -3,7 +3,6 @@ import {PrimeNG} from 'primeng/config';
 import {Header} from './header/header';
 import {ActivatedRoute, RouterOutlet} from '@angular/router';
 import {ScrollTop} from 'primeng/scrolltop';
-import {Consultancy} from './consultancy/consultancy';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +10,6 @@ import {Consultancy} from './consultancy/consultancy';
     Header,
     RouterOutlet,
     ScrollTop,
-    Consultancy,
   ],
   templateUrl: './app.html',
 })
