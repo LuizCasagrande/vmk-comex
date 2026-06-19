@@ -12,5 +12,4 @@ import {environment} from '../../../../environments/environment';
 export class Links {
 
   protected readonly PHONE = environment.phone;
-  protected readonly EMAIL = environment.email;
 }
